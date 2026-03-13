@@ -1,18 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   color-scheme: light dark;
+  --background: 228 16% 8%;
+  --foreground: 210 20% 92%;
+  --card: 228 14% 11%;
+  --card-foreground: 210 20% 92%;
+  --primary: 220 80% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 228 14% 18%;
+  --secondary-foreground: 210 16% 80%;
+  --muted: 228 12% 16%;
+  --muted-foreground: 220 10% 56%;
+  --accent: 228 14% 18%;
+  --accent-foreground: 210 20% 92%;
+  --destructive: 0 62% 52%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 228 10% 20%;
+  --input: 228 10% 20%;
+  --ring: 220 80% 60%;
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #101218;
+  color: #dce2ec;
 }
 
 @layer base {
   * {
-    @apply box-border;
-  }
-
-  body {
-    @apply m-0 bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
-    font-family: "Manrope", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    @apply border-border;
   }
 }

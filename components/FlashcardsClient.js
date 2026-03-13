@@ -1,10 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Card } from "./ui/card";
+import styles from "./FlashcardsClient.module.css";
 
 const UI_TEXT = {
   es: {
-    empty: "No se encontraron tarjetas en output/todotest-tip-3.",
+    empty: "No se encontraron tarjetas en output/todotest-tip-3.json.",
     question: "Pregunta",
     test: "Test",
     correctAnswer: "Respuesta correcta",
@@ -18,7 +22,7 @@ const UI_TEXT = {
     loading: "Traduciendo...",
   },
   ru: {
-    empty: "Карточки не найдены в output/todotest-tip-3.",
+    empty: "Карточки не найдены в output/todotest-tip-3.json.",
     question: "Вопрос",
     test: "Тест",
     correctAnswer: "Правильный ответ",
@@ -32,6 +36,13 @@ const UI_TEXT = {
     loading: "Перевод...",
   },
 };
+
+function getOptionClass(state) {
+  if (state === "correct") return `${styles.optionBtn} ${styles.optionCorrect}`;
+  if (state === "wrong") return `${styles.optionBtn} ${styles.optionWrong}`;
+  if (state === "selected") return `${styles.optionBtn} ${styles.optionSelected}`;
+  return styles.optionBtn;
+}
 
 export default function FlashcardsClient({ cards }) {
   const [index, setIndex] = useState(0);
@@ -67,6 +78,7 @@ export default function FlashcardsClient({ cards }) {
     if (!card || language !== "ru" || translations[card.id]) return;
 
     let active = true;
+
     async function translateCurrentCard() {
       setIsTranslating(true);
       try {
@@ -94,7 +106,6 @@ export default function FlashcardsClient({ cards }) {
         const optionTexts = tail.slice(0, Math.max(0, tail.length - 1));
 
         if (!active) return;
-
         setTranslations((prev) => ({
           ...prev,
           [card.id]: {
@@ -126,11 +137,6 @@ export default function FlashcardsClient({ cards }) {
     };
   }, [card, language, translations]);
 
-  const progress = useMemo(() => { 
-    if (!total) return "0 / 0";
-    return `${index + 1} / ${total}`;
-  }, [index, total]);
-
   function goPrev() {
     setIndex((current) => Math.max(0, current - 1));
     setSelectedOption(null);
@@ -145,8 +151,7 @@ export default function FlashcardsClient({ cards }) {
 
   function goRandom() {
     if (!total) return;
-    const randomIndex = Math.floor(Math.random() * total);
-    setIndex(randomIndex);
+    setIndex(Math.floor(Math.random() * total));
     setSelectedOption(null);
     setChecked(false);
   }
@@ -162,165 +167,142 @@ export default function FlashcardsClient({ cards }) {
   }
 
   function optionState(optionKey) {
-    if (!checked) {
-      return optionKey === selectedOption ? "selected" : "idle";
-    }
-
+    if (!checked) return optionKey === selectedOption ? "selected" : "idle";
     if (optionKey === card.correctAnswer) return "correct";
     if (optionKey === selectedOption && selectedOption !== card.correctAnswer) return "wrong";
     return "idle";
   }
 
-  function optionClass(optionKey) {
-    const state = optionState(optionKey);
-
-    if (state === "correct") {
-      return "border-emerald-500/70 bg-emerald-100/80 text-emerald-900 dark:border-emerald-400/70 dark:bg-emerald-500/20 dark:text-emerald-50";
-    }
-
-    if (state === "wrong") {
-      return "border-rose-500/70 bg-rose-100/80 text-rose-900 dark:border-rose-400/70 dark:bg-rose-500/20 dark:text-rose-50";
-    }
-
-    if (state === "selected") {
-      return "border-sky-500/70 bg-sky-100/80 text-sky-900 dark:border-sky-400/70 dark:bg-sky-500/20 dark:text-sky-50";
-    }
-
-    return "border-slate-200 bg-white text-slate-800 hover:border-indigo-400/60 hover:bg-indigo-50/60 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:border-indigo-300/50 dark:hover:bg-indigo-500/10";
-  }
-
-  const navButtonClass =
-    "min-h-12 rounded-xl px-3 py-2.5 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-45 md:min-h-11 md:px-4";
-
   if (!card) {
     return (
-      <main className="flex min-h-dvh items-end bg-gradient-to-b from-slate-50 via-indigo-50/50 to-cyan-50/60 px-3 pb-[calc(env(safe-area-inset-bottom)+20dvh)] pt-[calc(env(safe-area-inset-top)+12px)] dark:from-slate-950 dark:via-indigo-950/30 dark:to-cyan-950/20 md:items-center md:pb-6">
-        <section className="mx-auto w-full max-w-3xl rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-soft backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/85">
-          <h1 className="text-xl font-semibold tracking-tight">Flashcards</h1>
-          <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{t.empty}</p>
-        </section>
+      <main className={styles.shell}>
+        <Card className={styles.frame}>
+          <p className={styles.kicker}>Flashcards</p>
+          <h2 className={styles.testTitle}>Banco de preguntas</h2>
+          <p className="mt-2 text-sm text-slate-300">{t.empty}</p>
+        </Card>
       </main>
     );
   }
 
+  const optionDisabled = checked || (language === "ru" && !translatedCard);
+  const shownCard = currentCard || card;
+  const questionImages = Array.isArray(card.questionImages) ? card.questionImages : [];
+
   return (
-    <main className="flex min-h-dvh items-end bg-gradient-to-b from-slate-50 via-indigo-50/50 to-cyan-50/60 px-3 pb-[calc(env(safe-area-inset-bottom)+20dvh)] pt-[calc(env(safe-area-inset-top)+12px)] dark:from-slate-950 dark:via-indigo-950/30 dark:to-cyan-950/20 md:items-center md:pb-6">
-      <section className="mx-auto w-full max-w-3xl rounded-3xl border border-slate-200/80 bg-white/90 p-4 shadow-soft backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/85 md:p-6">
-        <header className="flex items-center justify-between gap-3">
-          <h1 className="max-w-[68%] text-base font-semibold tracking-tight text-slate-900 dark:text-slate-50 md:max-w-none md:text-2xl">
-            {currentCard?.testTitle || card.testTitle}
-          </h1>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className={`inline-flex min-h-9 min-w-11 items-center justify-center rounded-full border px-3 text-xs font-extrabold tracking-wide transition ${
-                language === "ru"
-                  ? "border-indigo-500 bg-indigo-600 text-white dark:border-indigo-400 dark:bg-indigo-500"
-                  : "border-slate-300 bg-white text-slate-700 hover:border-indigo-400 hover:text-indigo-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-indigo-400 dark:hover:text-indigo-300"
-              }`}
-              onClick={() => setLanguage((value) => (value === "es" ? "ru" : "es"))}
-            >
-              RU
-            </button>
-            <span className="rounded-full border border-slate-300 bg-white/90 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 md:text-sm">
-              {progress}
-            </span>
+    <main className={styles.shell}>
+      <Card className={styles.frame}>
+        <div className="flex flex-col gap-3">
+          <div className={`flex items-start justify-between gap-3 ${styles.topRow}`}>
+            <div>
+              <p className={styles.kicker}>Sistema de entrenamiento</p>
+              <h2 className={styles.testTitle}>{shownCard.testTitle}</h2>
+            </div>
+
+            <div className={`flex items-center gap-2 ${styles.controls}`}>
+              <Button
+                size="sm"
+                variant={language === "ru" ? "default" : "outline"}
+                className={`${styles.langButton} ${language === "ru" ? styles.langButtonActive : ""}`}
+                onClick={() => setLanguage((value) => (value === "es" ? "ru" : "es"))}
+              >
+                RU
+              </Button>
+
+              <div className={styles.progressWrap}>
+                <p className={styles.progressText}>
+                  {String(index + 1).padStart(3, "0")} / {String(total).padStart(3, "0")}
+                </p>
+              </div>
+            </div>
           </div>
-        </header>
 
-        <div className="mt-3 flex flex-wrap gap-2 text-xs font-medium text-slate-600 dark:text-slate-300 md:text-sm">
-          <span>
-            {t.question} {card.questionNumber}
-          </span>
-          <span>
-            {t.test} {card.testNumber}
-          </span>
-        </div>
+          <div className={`flex flex-wrap gap-2 ${styles.metaRow}`}>
+            <Badge className={styles.metaBadge}>
+              {t.question} {card.questionNumber}
+            </Badge>
+            <Badge className={styles.metaBadge}>
+              {t.test} {card.testNumber}
+            </Badge>
+          </div>
 
-        <h2 className="mt-4 text-[1.05rem] font-semibold leading-snug text-slate-900 dark:text-slate-50 md:mt-5 md:text-2xl">
-          {language === "ru" && !translatedCard ? t.loading : currentCard?.questionText}
-        </h2>
+          <h3 className={styles.questionTitle}>
+            {language === "ru" && !translatedCard ? t.loading : shownCard.questionText}
+          </h3>
 
-        <ul className="mt-4 grid list-none gap-2.5 p-0 md:mt-5 md:gap-3">
-          {(currentCard?.options || card.options).map((option) => (
-            <li key={option.key}>
+          {questionImages.length > 0 ? (
+            <div className={`grid gap-2 ${questionImages.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+              {questionImages.map((url, imageIndex) => (
+                <div key={`${card.id}-img-${imageIndex}`} className={styles.imageCard}>
+                  <img src={url} alt={`Imagen ${imageIndex + 1} de la pregunta`} className="h-auto w-full rounded-md" />
+                </div>
+              ))}
+            </div>
+          ) : null}
+
+          <div className="flex flex-col gap-2">
+            {shownCard.options.map((option) => (
               <button
+                key={option.key}
                 type="button"
-                className={`w-full rounded-2xl border px-3 py-3 text-left text-[0.95rem] leading-relaxed shadow-sm transition min-h-12 md:px-4 md:py-3.5 md:text-base ${optionClass(
-                  option.key
-                )}`}
                 onClick={() => {
                   if (!checked) setSelectedOption(option.key);
                 }}
-                disabled={checked || (language === "ru" && !translatedCard)}
+                disabled={optionDisabled}
+                className={getOptionClass(optionState(option.key))}
               >
-                <strong>{option.key})</strong> {option.text}
+                <span className={styles.optionText}>
+                  <span className={styles.optionPrefix}>{option.key})</span> {option.text}
+                </span>
               </button>
-            </li>
-          ))}
-        </ul>
-
-        {checked ? (
-          <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-3 text-sm leading-relaxed text-emerald-900 dark:border-emerald-500/40 dark:bg-emerald-900/30 dark:text-emerald-50 md:mt-5 md:p-4 md:text-base">
-            <p className="mb-2">
-              <strong>{t.correctAnswer}:</strong> {card.correctAnswer}
-            </p>
-            <p className="mb-2">
-              <strong>{t.yourAnswer}:</strong> {selectedOption}
-            </p>
-            <p>
-              {language === "ru" && !translatedCard
-                ? t.loading
-                : currentCard?.explanation || t.noExplanation}
-            </p>
+            ))}
           </div>
-        ) : null}
 
-        <div className="sticky bottom-[calc(env(safe-area-inset-bottom)+10px)] mt-4 rounded-2xl border border-slate-200/80 bg-white/95 p-2 shadow-xl backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/95 md:static md:mt-6 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none">
-          <footer className="space-y-2.5">
-            <div className="grid grid-cols-2 gap-2.5">
-              <button
-                type="button"
-                className={`${navButtonClass} bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500`}
+          {checked ? (
+            <div className={styles.explanation}>
+              <p className="mb-1 text-sm">
+                <strong>{t.correctAnswer}:</strong> {card.correctAnswer}
+              </p>
+              <p className="mb-1 text-sm">
+                <strong>{t.yourAnswer}:</strong> {selectedOption}
+              </p>
+              <p className="text-sm">
+                {language === "ru" && !translatedCard ? t.loading : shownCard.explanation || t.noExplanation}
+              </p>
+            </div>
+          ) : null}
+        </div>
+
+        <div className={styles.dock}>
+          <div className="flex flex-col gap-2">
+            <div className="grid grid-cols-2 gap-2">
+              <Button
+                className={styles.actionPrimary}
                 onClick={checked ? resetCurrentCard : checkAnswer}
                 disabled={!checked && (!selectedOption || (language === "ru" && !translatedCard))}
               >
                 {checked ? t.retry : t.check}
-              </button>
-              <button
-                type="button"
-                className={`${navButtonClass} bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-500`}
-                onClick={goRandom}
-              >
+              </Button>
+              <Button className={styles.actionAccent} onClick={goRandom}>
                 {t.random}
-              </button>
+              </Button>
             </div>
-            <div className="grid grid-cols-2 gap-2.5">
-              <button
-                type="button"
-                className={`${navButtonClass} bg-slate-600 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600`}
-                onClick={goPrev}
-                disabled={index === 0}
-              >
+
+            <div className="grid grid-cols-2 gap-2">
+              <Button className={styles.navBack} onClick={goPrev} disabled={index === 0}>
                 {t.back}
-              </button>
-              <button
-                type="button"
-                className={`${navButtonClass} bg-sky-600 hover:bg-sky-700 dark:bg-sky-600 dark:hover:bg-sky-500`}
-                onClick={goNext}
-                disabled={index === total - 1}
-              >
+              </Button>
+              <Button className={styles.navNext} onClick={goNext} disabled={index === total - 1}>
                 {t.next}
-              </button>
+              </Button>
             </div>
-          </footer>
+          </div>
+
           {language === "ru" && isTranslating ? (
-            <p className="mt-2 text-center text-xs font-medium text-slate-500 dark:text-slate-400 md:mt-3 md:text-sm">
-              {t.loading}
-            </p>
+            <p className={`mt-2 text-center text-xs ${styles.translationHint}`}>{t.loading}</p>
           ) : null}
         </div>
-      </section>
+      </Card>
     </main>
   );
 }

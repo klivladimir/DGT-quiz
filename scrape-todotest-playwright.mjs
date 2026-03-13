@@ -59,69 +59,77 @@ async function resolveTargetUrl() {
 function buildOutputDir(url) {
   const parsedUrl = new URL(url);
   const tip = parsedUrl.searchParams.get('tip') ?? 'unknown';
-  return path.join(WORKDIR, 'output', `todotest-tip-${tip}`);
+  return path.join(WORKDIR, 'output', `todotest-tip-${tip}.json`);
 }
 
-function toSafeFilePart(value) {
-  return value
-    .normalize('NFKD')
-    .replace(/[^\w\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-')
-    .toLowerCase();
+function getTestNumber(result) {
+  return Number((result.testHeading.match(/\d+/) || [String(result.meta.testId)])[0]);
 }
 
-function renderTestMarkdown(result) {
-  const lines = [
-    `# ${result.testHeading}`,
-    '',
-    `- Source URL: <${result.sourceUrl}>`,
-    `- Scraped at: ${result.scrapedAt}`,
-    `- Total questions: ${result.meta.totalQuestions}`,
-  ];
+async function upsertResultIntoJson(outputFile, result) {
+  const tip = Number(result.meta.tip);
+  let payload = {
+    tip,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    tests: [],
+  };
 
-  for (const question of result.questions) {
-    lines.push('', `## ${question.index}. ${question.questionText}`, '');
-    lines.push(`- Correct answer: \`${question.correctAnswer ?? '-'}\``);
-    lines.push(`- Selected answer: \`${question.selectedAnswer ?? '-'}\``);
-
-    if (question.imageUrls.length > 0) {
-      lines.push(`- Question images: ${question.imageUrls.map((url) => `<${url}>`).join(', ')}`);
+  try {
+    const raw = await readFile(outputFile, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (parsed && Array.isArray(parsed.tests)) {
+      payload = parsed;
     }
-
-    lines.push('', '### Options', '');
-    for (const option of question.options) {
-      const flags = [];
-      if (option.isCorrect) flags.push('correct');
-      if (option.isSelected) flags.push('selected');
-      const suffix = flags.length ? ` (${flags.join(', ')})` : '';
-      lines.push(`- \`${option.key}\` ${option.text}${suffix}`);
-    }
-
-    lines.push('', '### Explanation', '');
-    lines.push(question.explanationText || '_No explanation found._');
-
-    if (question.explanationImageUrls.length > 0) {
-      lines.push('', '### Explanation Images', '');
-      for (const url of question.explanationImageUrls) {
-        lines.push(`- <${url}>`);
-      }
-    }
-
-    if (question.explanationVideoUrls.length > 0) {
-      lines.push('', '### Explanation Videos', '');
-      for (const url of question.explanationVideoUrls) {
-        lines.push(`- <${url}>`);
-      }
-    }
+  } catch {
+    // Start a fresh payload if the file does not exist yet.
   }
 
-  return `${lines.join('\n')}\n`;
+  const testNumber = getTestNumber(result);
+  const normalizedQuestions = result.questions.map((question) => ({
+    index: question.index,
+    questionNumber: question.questionNumber,
+    questionId: question.questionId,
+    questionText: question.questionText,
+    imageUrls: question.imageUrls || [],
+    correctAnswer: question.correctAnswer || null,
+    options: (question.options || []).map((option) => ({
+      key: option.key,
+      text: option.text,
+      isCorrect: Boolean(option.isCorrect),
+    })),
+    explanationText: question.explanationText || null,
+  }));
+
+  const testEntry = {
+    testNumber,
+    testHeading: result.testHeading,
+    sourceUrl: result.sourceUrl,
+    scrapedAt: result.scrapedAt,
+    totalQuestions: result.meta.totalQuestions,
+    questions: normalizedQuestions,
+  };
+
+  const testIndex = payload.tests.findIndex(
+    (entry) => Number(entry.testNumber) === testNumber
+  );
+  if (testIndex >= 0) {
+    payload.tests[testIndex] = testEntry;
+  } else {
+    payload.tests.push(testEntry);
+  }
+
+  payload.tip = tip;
+  payload.updatedAt = new Date().toISOString();
+  payload.tests.sort((a, b) => Number(a.testNumber) - Number(b.testNumber));
+
+  await writeFile(outputFile, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  return payload;
 }
 
 async function main() {
   const targetUrl = await resolveTargetUrl();
-  const outputDir = process.env.OUTPUT_PATH || buildOutputDir(targetUrl);
+  const outputFile = process.env.OUTPUT_PATH || buildOutputDir(targetUrl);
   const sessionStatePath = process.env.STORAGE_STATE || SESSION_STATE_FILE;
 
   const browser = await chromium.launch({
@@ -358,18 +366,15 @@ async function main() {
       }),
     };
 
-    await mkdir(outputDir, { recursive: true });
-    const testNumber = (result.testHeading.match(/\d+/) || [String(result.meta.testId)])[0];
-    const outputFile = path.join(
-      outputDir,
-      `${String(testNumber).padStart(2, '0')}-${toSafeFilePart(result.testHeading)}.md`
-    );
-    await writeFile(outputFile, renderTestMarkdown(result), 'utf8');
+    await mkdir(path.dirname(outputFile), { recursive: true });
+    const payload = await upsertResultIntoJson(outputFile, result);
+    const testNumber = getTestNumber(result);
 
     console.log(JSON.stringify({
       outputFile,
+      testNumber,
       totalQuestions: result.questions.length,
-      filesWritten: 1,
+      testsInFile: payload.tests.length,
       testHeading: result.testHeading,
     }, null, 2));
 
