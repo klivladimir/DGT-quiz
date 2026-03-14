@@ -10,7 +10,6 @@ const BASE_UI_TEXT = {
   noExplanation: "No hay explicación disponible.",
   back: "Atrás",
   next: "Siguiente",
-  loading: "Traduciendo...",
   settings: "Ajustes",
   chooseLanguage: "Idioma nativo",
   cardOrderSection: "Mostrar tarjetas",
@@ -23,7 +22,6 @@ const BASE_UI_TEXT = {
 const COMMON_LANGUAGE_CODES = [
   "en",
   "ru",
-  "uk",
   "fr",
   "de",
   "it",
@@ -221,7 +219,6 @@ export default function FlashcardsClient({ cards }) {
   const [translationEnabled, setTranslationEnabled] = useState(false);
   const [translations, setTranslations] = useState({});
   const [uiTextByLanguage, setUiTextByLanguage] = useState({ es: BASE_UI_TEXT });
-  const [isTranslatingCard, setIsTranslatingCard] = useState(false);
   const [isProgressHydrated, setIsProgressHydrated] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [preferredLanguageCodes, setPreferredLanguageCodes] = useState([]);
@@ -435,7 +432,6 @@ export default function FlashcardsClient({ cards }) {
     let active = true;
 
     async function translateCurrentCard() {
-      setIsTranslatingCard(true);
       try {
         const payload = {
           target: activeLanguage,
@@ -481,8 +477,6 @@ export default function FlashcardsClient({ cards }) {
             explanation: card.explanation || "",
           },
         }));
-      } finally {
-        if (active) setIsTranslatingCard(false);
       }
     }
 
@@ -653,7 +647,7 @@ export default function FlashcardsClient({ cards }) {
             </div>
 
             <h3 className={styles.questionTitle}>
-              {isTranslationActive && !translatedCard ? t.loading : shownCard.questionText}
+              {shownCard.questionText}
             </h3>
 
             {questionImages.length > 0 ? (
@@ -687,7 +681,7 @@ export default function FlashcardsClient({ cards }) {
             {checked ? (
               <div className={styles.explanation}>
                 <p className="text-sm">
-                  {isTranslationActive && !translatedCard ? t.loading : shownCard.explanation || t.noExplanation}
+                  {shownCard.explanation || t.noExplanation}
                 </p>
               </div>
             ) : null}
@@ -737,10 +731,6 @@ export default function FlashcardsClient({ cards }) {
                 <span className={styles.navIcon} aria-hidden="true">→</span>
               </Button>
             </div>
-
-            {isTranslationActive && isTranslatingCard ? (
-              <p className={`mt-2 text-center text-xs ${styles.translationHint}`}>{t.loading}</p>
-            ) : null}
           </div>
         </Card>
       </main>

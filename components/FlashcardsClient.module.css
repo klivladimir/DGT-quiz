@@ -418,12 +418,6 @@
   background: rgba(42, 52, 80, 0.86);
 }
 
-.translationHint {
-  color: #6e7890;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
 .settingsBackdrop {
   position: fixed;
   inset: 0;
