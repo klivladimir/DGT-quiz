@@ -118,6 +118,13 @@
   align-items: center;
   gap: 10px;
   width: 100%;
+  position: sticky;
+  top: calc(env(safe-area-inset-top) + 10px);
+  z-index: 8;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(22, 24, 34, 0.82);
+  backdrop-filter: blur(10px);
 }
 
 .kicker {
@@ -282,7 +289,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
   color: #c8d0e0;
-  padding: 13px 16px;
+  padding: 4px 12px;
   text-align: left;
   cursor: pointer;
   transition: all 150ms ease;
@@ -301,7 +308,7 @@
 .optionText {
   color: inherit;
   line-height: 1.5;
-  font-size: 0.94rem;
+  font-size: 0.8rem;
 }
 
 .optionPrefix {
@@ -339,8 +346,6 @@
 }
 
 .dock {
-  position: sticky;
-  bottom: calc(env(safe-area-inset-bottom) + 12px);
   margin-top: 16px;
   padding: 12px;
 }
@@ -567,8 +572,9 @@
 @media (max-width: 480px) {
   .frame {
     height: 100%;
-    padding: auto 16px;
+    padding: 16px;
     border-radius: 0;
+    overflow: auto;
   }
 
   .testTitle {
@@ -576,7 +582,7 @@
   }
 
   .questionTitle {
-    font-size: 1.04rem;
+    font-size: 1rem;
   }
 
   .navCircle {
