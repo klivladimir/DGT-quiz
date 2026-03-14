@@ -7,22 +7,16 @@ import styles from "./FlashcardsClient.module.css";
 
 const BASE_UI_TEXT = {
   empty: "No se encontraron tarjetas en output/todotest-tip-3.json.",
-  question: "Pregunta",
-  test: "Test",
-  correctAnswer: "Respuesta correcta",
-  yourAnswer: "Tu respuesta",
   noExplanation: "No hay explicación disponible.",
   back: "Atrás",
-  check: "Comprobar",
-  retry: "Reintentar",
-  random: "Random",
   next: "Siguiente",
   loading: "Traduciendo...",
   settings: "Ajustes",
   chooseLanguage: "Idioma nativo",
-  openFutureModal: "Abrir modal de ajustes (próximamente)",
-  enableTranslation: "Activar traducción",
-  disableTranslation: "Desactivar traducción",
+  cardOrderSection: "Mostrar tarjetas",
+  orderSequential: "Normal",
+  orderRandom: "Random",
+  orderWrongFirst: "Errores primero",
   closePanel: "Cerrar",
 };
 
@@ -44,6 +38,11 @@ const COMMON_LANGUAGE_CODES = [
 ];
 
 const PROGRESS_STORAGE_KEY = "todotest.flashcards.progress.v3";
+const CARD_ORDER_MODE = {
+  SEQUENTIAL: "sequential",
+  RANDOM: "random",
+  WRONG_FIRST: "wrong-first",
+};
 
 function normalizeStats(raw) {
   if (!raw || typeof raw !== "object") {
@@ -93,6 +92,12 @@ function ratingToDifficulty(nextRating) {
   if (nextRating === "easy") return 2;
   if (nextRating === "unsure") return 1;
   return 0;
+}
+
+function normalizeCardOrderMode(value) {
+  if (value === CARD_ORDER_MODE.RANDOM) return CARD_ORDER_MODE.RANDOM;
+  if (value === CARD_ORDER_MODE.WRONG_FIRST) return CARD_ORDER_MODE.WRONG_FIRST;
+  return CARD_ORDER_MODE.SEQUENTIAL;
 }
 
 function getHistoryDifficultyClass(difficulty) {
@@ -173,6 +178,29 @@ function buildShuffledOrder(length, pinnedIndex) {
   return order;
 }
 
+function buildWrongFirstOrder(cards, answerMemoryByCard) {
+  return cards
+    .map((card, index) => {
+      const history = Array.isArray(answerMemoryByCard[card.id]) ? answerMemoryByCard[card.id] : [];
+      const lastEntry = history.length ? history[history.length - 1] : null;
+      const isLastWrong = Array.isArray(lastEntry) ? lastEntry[0] === false : false;
+      return { index, isLastWrong };
+    })
+    .sort((a, b) => {
+      if (a.isLastWrong !== b.isLastWrong) return a.isLastWrong ? -1 : 1;
+      return a.index - b.index;
+    })
+    .map((item) => item.index);
+}
+
+function areOrdersEqual(first, second) {
+  if (!Array.isArray(first) || !Array.isArray(second) || first.length !== second.length) return false;
+  for (let i = 0; i < first.length; i += 1) {
+    if (first[i] !== second[i]) return false;
+  }
+  return true;
+}
+
 function isValidOrder(order, length) {
   if (!Array.isArray(order) || order.length !== length) return false;
   const unique = new Set(order);
@@ -186,7 +214,7 @@ export default function FlashcardsClient({ cards }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [checked, setChecked] = useState(false);
   const [rating, setRating] = useState(null);
-  const [randomEnabled, setRandomEnabled] = useState(false);
+  const [cardOrderMode, setCardOrderMode] = useState(CARD_ORDER_MODE.SEQUENTIAL);
   const [answerStats, setAnswerStats] = useState(() => normalizeStats(null));
   const [answerMemoryByCard, setAnswerMemoryByCard] = useState(() => normalizeAnswerMemory(null));
   const [selectedLanguage, setSelectedLanguage] = useState("en");
@@ -277,20 +305,28 @@ export default function FlashcardsClient({ cards }) {
           ? saved.selectedOption
           : null;
 
-      const shouldEnableRandom = Boolean(saved.randomEnabled) && cards.length > 1;
-      const savedOrder = shouldEnableRandom && isValidOrder(saved.randomOrder, cards.length)
-        ? saved.randomOrder
-        : null;
-      const nextOrder = shouldEnableRandom
-        ? savedOrder || buildShuffledOrder(cards.length, restoredIndex)
-        : buildSequentialOrder(cards.length);
-      const restoredPosition = shouldEnableRandom
-        ? Math.max(0, nextOrder.indexOf(restoredIndex))
-        : restoredIndex;
+      const savedAnswerMemory = normalizeAnswerMemory(saved.answerMemoryByCard);
+      const hasLegacyRandom = Boolean(saved.randomEnabled) && cards.length > 1;
+      const restoredMode = normalizeCardOrderMode(saved.cardOrderMode || (hasLegacyRandom ? CARD_ORDER_MODE.RANDOM : CARD_ORDER_MODE.SEQUENTIAL));
+
+      let nextOrder = buildSequentialOrder(cards.length);
+      if (restoredMode === CARD_ORDER_MODE.RANDOM) {
+        const savedOrder = isValidOrder(saved.cardOrder, cards.length)
+          ? saved.cardOrder
+          : isValidOrder(saved.randomOrder, cards.length)
+            ? saved.randomOrder
+            : null;
+        nextOrder = savedOrder || buildShuffledOrder(cards.length, restoredIndex);
+      }
+      if (restoredMode === CARD_ORDER_MODE.WRONG_FIRST) {
+        nextOrder = buildWrongFirstOrder(cards, savedAnswerMemory);
+      }
+
+      const restoredPosition = Math.max(0, nextOrder.indexOf(restoredIndex));
 
       setOrder(nextOrder);
       setPosition(restoredPosition);
-      setRandomEnabled(shouldEnableRandom);
+      setCardOrderMode(restoredMode);
       setSelectedOption(restoredOption);
       setChecked(Boolean(saved.checked) && Boolean(restoredOption));
       setRating(
@@ -299,7 +335,7 @@ export default function FlashcardsClient({ cards }) {
           : null
       );
       setAnswerStats(normalizeStats(saved.answerStats));
-      setAnswerMemoryByCard(normalizeAnswerMemory(saved.answerMemoryByCard));
+      setAnswerMemoryByCard(savedAnswerMemory);
     } catch {
       // Ignore corrupted storage.
     } finally {
@@ -317,8 +353,8 @@ export default function FlashcardsClient({ cards }) {
         selectedOption,
         checked,
         rating,
-        randomEnabled,
-        randomOrder: randomEnabled ? order : undefined,
+        cardOrderMode,
+        cardOrder: cardOrderMode === CARD_ORDER_MODE.RANDOM ? order : undefined,
         answerStats,
         answerMemoryByCard,
         selectedLanguage,
@@ -335,7 +371,7 @@ export default function FlashcardsClient({ cards }) {
     currentCardIndex,
     position,
     order,
-    randomEnabled,
+    cardOrderMode,
     selectedOption,
     checked,
     rating,
@@ -470,26 +506,39 @@ export default function FlashcardsClient({ cards }) {
     setRating(null);
   }
 
-  function toggleRandomOrder() {
-    if (total <= 1) return;
+  function setOrderMode(nextModeInput) {
+    const nextMode = normalizeCardOrderMode(nextModeInput);
+    if (nextMode === cardOrderMode) return;
 
     const pinnedIndex = Number.isInteger(order[position]) ? order[position] : 0;
-    const nextRandomState = !randomEnabled;
+    let nextOrder = buildSequentialOrder(total);
 
-    if (nextRandomState) {
-      const shuffledOrder = buildShuffledOrder(total, pinnedIndex);
-      setOrder(shuffledOrder);
-      setPosition(0);
-    } else {
-      setOrder(buildSequentialOrder(total));
-      setPosition(pinnedIndex);
+    if (nextMode === CARD_ORDER_MODE.RANDOM) {
+      nextOrder = buildShuffledOrder(total, pinnedIndex);
+    } else if (nextMode === CARD_ORDER_MODE.WRONG_FIRST) {
+      nextOrder = buildWrongFirstOrder(cards, answerMemoryByCard);
     }
 
-    setRandomEnabled(nextRandomState);
+    const nextPosition = Math.max(0, nextOrder.indexOf(pinnedIndex));
+    setOrder(nextOrder);
+    setPosition(nextPosition);
+    setCardOrderMode(nextMode);
     setSelectedOption(null);
     setChecked(false);
     setRating(null);
   }
+
+  useEffect(() => {
+    if (!total || cardOrderMode !== CARD_ORDER_MODE.WRONG_FIRST) return;
+
+    const pinnedIndex = Number.isInteger(order[position]) ? order[position] : 0;
+    const nextOrder = buildWrongFirstOrder(cards, answerMemoryByCard);
+    if (areOrdersEqual(order, nextOrder)) return;
+
+    const nextPosition = Math.max(0, nextOrder.indexOf(pinnedIndex));
+    setOrder(nextOrder);
+    setPosition(nextPosition);
+  }, [answerMemoryByCard, cardOrderMode, cards, order, position, total]);
 
   function rateAnswer(nextRating) {
     if (!selectedOption || (isTranslationActive && !translatedCard)) return;
@@ -661,21 +710,21 @@ export default function FlashcardsClient({ cards }) {
                   onClick={() => rateAnswer("hard")}
                   disabled={!canRate}
                 >
-                  HARD
+                  Difícil
                 </Button>
                 <Button
                   className={`${styles.ratingBtn} ${styles.ratingUnsure} ${rating === "unsure" ? styles.ratingActive : ""}`}
                   onClick={() => rateAnswer("unsure")}
                   disabled={!canRate}
                 >
-                  Unsure
+                  Duda
                 </Button>
                 <Button
                   className={`${styles.ratingBtn} ${styles.ratingEasy} ${rating === "easy" ? styles.ratingActive : ""}`}
                   onClick={() => rateAnswer("easy")}
                   disabled={!canRate}
                 >
-                  EASY
+                  Fácil
                 </Button>
               </div>
 
@@ -740,17 +789,39 @@ export default function FlashcardsClient({ cards }) {
           </select>
         </div>
 
-        <Button
-          className={`${styles.settingsRandomButton} ${randomEnabled ? styles.settingsRandomButtonActive : ""}`}
-          onClick={toggleRandomOrder}
-          disabled={total <= 1}
-        >
-          {t.random}
-        </Button>
-
-        <Button className={styles.settingsFutureButton} disabled>
-          {t.openFutureModal}
-        </Button>
+        <div className={styles.settingsField}>
+          <p className={styles.settingsLabel}>{t.cardOrderSection}</p>
+          <div className={styles.orderRadioGroup} role="radiogroup" aria-label={t.cardOrderSection}>
+            <button
+              type="button"
+              role="radio"
+              aria-checked={cardOrderMode === CARD_ORDER_MODE.SEQUENTIAL}
+              className={`${styles.orderRadio} ${cardOrderMode === CARD_ORDER_MODE.SEQUENTIAL ? styles.orderRadioActive : ""}`}
+              onClick={() => setOrderMode(CARD_ORDER_MODE.SEQUENTIAL)}
+            >
+              {t.orderSequential}
+            </button>
+            <button
+              type="button"
+              role="radio"
+              aria-checked={cardOrderMode === CARD_ORDER_MODE.RANDOM}
+              className={`${styles.orderRadio} ${cardOrderMode === CARD_ORDER_MODE.RANDOM ? styles.orderRadioActive : ""}`}
+              onClick={() => setOrderMode(CARD_ORDER_MODE.RANDOM)}
+              disabled={total <= 1}
+            >
+              {t.orderRandom}
+            </button>
+            <button
+              type="button"
+              role="radio"
+              aria-checked={cardOrderMode === CARD_ORDER_MODE.WRONG_FIRST}
+              className={`${styles.orderRadio} ${cardOrderMode === CARD_ORDER_MODE.WRONG_FIRST ? styles.orderRadioActive : ""}`}
+              onClick={() => setOrderMode(CARD_ORDER_MODE.WRONG_FIRST)}
+            >
+              {t.orderWrongFirst}
+            </button>
+          </div>
+        </div>
       </aside>
     </>
   );
