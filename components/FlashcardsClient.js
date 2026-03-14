@@ -637,12 +637,6 @@ export default function FlashcardsClient({ cards }) {
 
             {checked ? (
               <div className={styles.explanation}>
-                <p className="mb-1 text-sm">
-                  <strong>{t.correctAnswer}:</strong> {card.correctAnswer}
-                </p>
-                <p className="mb-1 text-sm">
-                  <strong>{t.yourAnswer}:</strong> {selectedOption}
-                </p>
                 <p className="text-sm">
                   {isTranslationActive && !translatedCard ? t.loading : shownCard.explanation || t.noExplanation}
                 </p>
