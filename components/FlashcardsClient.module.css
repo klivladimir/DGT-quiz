@@ -5,11 +5,16 @@
   --aurora-4: rgba(255, 214, 87, 0.28);
   position: relative;
   min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: 0 16px;
   overflow: hidden;
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 }
 
 .shell::before,
@@ -561,8 +566,9 @@
 
 @media (max-width: 480px) {
   .frame {
-    padding: 16px;
-    border-radius: 16px;
+    height: 100%;
+    padding: auto 16px;
+    border-radius: 0;
   }
 
   .testTitle {
