@@ -23,7 +23,7 @@
 
 .topRow {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: flex-start;
   gap: 10px;
   width: 100%;
@@ -80,28 +80,6 @@
   border-color: hsl(152 55% 46%);
   background: hsla(152, 55%, 46%, 0.2);
   color: #c2f0d8;
-}
-
-.topRandomButton {
-  min-height: 34px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  color: #9aa3b8;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  justify-self: center;
-}
-
-.topRandomButton:hover {
-  background: rgba(255, 255, 255, 0.09);
-}
-
-.topRandomButtonActive {
-  border-color: hsl(200 75% 58%);
-  background: hsla(200, 75%, 58%, 0.2);
-  color: #cdeefe;
 }
 
 .settingsTrigger:hover {
@@ -398,6 +376,33 @@
 
 .languageSelect:focus {
   border-color: hsl(220 80% 60%);
+}
+
+.settingsRandomButton {
+  width: 100%;
+  min-height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #aeb8cf;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.settingsRandomButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.settingsRandomButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.settingsRandomButtonActive {
+  border-color: hsl(200 75% 58%);
+  background: hsla(200, 75%, 58%, 0.2);
+  color: #d2efff;
 }
 
 .settingsFutureButton {

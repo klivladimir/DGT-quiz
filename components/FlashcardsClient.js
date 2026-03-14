@@ -62,6 +62,39 @@ function normalizeStats(raw) {
   };
 }
 
+function normalizeAnswerMemory(raw) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+
+  const normalized = {};
+
+  for (const [cardId, values] of Object.entries(raw)) {
+    if (!Array.isArray(values)) continue;
+
+    const cleaned = values
+      .map((entry) => {
+        if (!Array.isArray(entry) || entry.length !== 2) return null;
+        const isCorrect = Boolean(entry[0]);
+        const difficulty = Number(entry[1]);
+        if (!Number.isInteger(difficulty) || difficulty < 0 || difficulty > 2) return null;
+        return [isCorrect, difficulty];
+      })
+      .filter(Boolean)
+      .slice(-3);
+
+    if (cleaned.length > 0) {
+      normalized[cardId] = cleaned;
+    }
+  }
+
+  return normalized;
+}
+
+function ratingToDifficulty(nextRating) {
+  if (nextRating === "easy") return 2;
+  if (nextRating === "unsure") return 1;
+  return 0;
+}
+
 function getOptionClass(state) {
   if (state === "correct") return `${styles.optionBtn} ${styles.optionCorrect}`;
   if (state === "wrong") return `${styles.optionBtn} ${styles.optionWrong}`;
@@ -149,6 +182,7 @@ export default function FlashcardsClient({ cards }) {
   const [rating, setRating] = useState(null);
   const [randomEnabled, setRandomEnabled] = useState(false);
   const [answerStats, setAnswerStats] = useState(() => normalizeStats(null));
+  const [answerMemoryByCard, setAnswerMemoryByCard] = useState(() => normalizeAnswerMemory(null));
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [translationEnabled, setTranslationEnabled] = useState(false);
   const [translations, setTranslations] = useState({});
@@ -259,6 +293,7 @@ export default function FlashcardsClient({ cards }) {
           : null
       );
       setAnswerStats(normalizeStats(saved.answerStats));
+      setAnswerMemoryByCard(normalizeAnswerMemory(saved.answerMemoryByCard));
     } catch {
       // Ignore corrupted storage.
     } finally {
@@ -279,6 +314,7 @@ export default function FlashcardsClient({ cards }) {
         randomEnabled,
         randomOrder: randomEnabled ? order : undefined,
         answerStats,
+        answerMemoryByCard,
         selectedLanguage,
         translationEnabled,
         updatedAt: new Date().toISOString(),
@@ -298,6 +334,7 @@ export default function FlashcardsClient({ cards }) {
     checked,
     rating,
     answerStats,
+    answerMemoryByCard,
     selectedLanguage,
     translationEnabled,
   ]);
@@ -462,6 +499,14 @@ export default function FlashcardsClient({ cards }) {
       correct: prev.correct + (isCorrect ? 1 : 0),
       wrong: prev.wrong + (isCorrect ? 0 : 1),
     }));
+    setAnswerMemoryByCard((prev) => {
+      const currentHistory = Array.isArray(prev[card.id]) ? prev[card.id] : [];
+      const nextEntry = [isCorrect, ratingToDifficulty(nextRating)];
+      return {
+        ...prev,
+        [card.id]: [...currentHistory, nextEntry].slice(-3),
+      };
+    });
   }
 
   function toggleTranslation() {
@@ -514,14 +559,6 @@ export default function FlashcardsClient({ cards }) {
                 onClick={toggleTranslation}
               >
                 {currentLanguageLabel}
-              </Button>
-              <Button
-                size="sm"
-                className={`${styles.topRandomButton} ${randomEnabled ? styles.topRandomButtonActive : ""}`}
-                onClick={toggleRandomOrder}
-                disabled={total <= 1}
-              >
-                {t.random}
               </Button>
               <Button
                 size="sm"
@@ -676,6 +713,14 @@ export default function FlashcardsClient({ cards }) {
             ))}
           </select>
         </div>
+
+        <Button
+          className={`${styles.settingsRandomButton} ${randomEnabled ? styles.settingsRandomButtonActive : ""}`}
+          onClick={toggleRandomOrder}
+          disabled={total <= 1}
+        >
+          {t.random}
+        </Button>
 
         <Button className={styles.settingsFutureButton} disabled>
           {t.openFutureModal}
