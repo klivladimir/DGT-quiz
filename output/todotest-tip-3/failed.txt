@@ -1,3 +1,0 @@
-https://www.todotest.com/tests/test.asp?tip=3&t=2
-https://www.todotest.com/tests/test.asp?tip=3&t=3
-https://www.todotest.com/tests/test.asp?tip=3&t=4

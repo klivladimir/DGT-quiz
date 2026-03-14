@@ -70,10 +70,10 @@ async function translateText(text, target) {
 export async function POST(request) {
   try {
     const body = await request.json();
-    const target = body?.target || "ru";
+    const target = String(body?.target || "es").trim();
     const texts = Array.isArray(body?.texts) ? body.texts : [];
-
-    if (target !== "ru" && target !== "es") {
+    const isValidTarget = /^[a-z]{2,3}(?:-[A-Z]{2})?$/.test(target);
+    if (!isValidTarget) {
       return NextResponse.json({ error: "Unsupported target language" }, { status: 400 });
     }
 
