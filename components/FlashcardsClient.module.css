@@ -75,6 +75,7 @@
 }
 
 .frame {
+  place-self: end;
   position: relative;
   width: 100%;
   max-width: 44rem;
@@ -252,6 +253,14 @@
   line-height: 1.5;
   color: #f0f4fa;
   font-weight: 600;
+}
+
+.questionId {
+  margin-top: -2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8ea0bf;
 }
 
 .imageCard {
