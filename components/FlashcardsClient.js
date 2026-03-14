@@ -662,7 +662,7 @@ export default function FlashcardsClient({ cards }) {
                 <div className={styles.imageCard}>
                   <img
                     src={localCardImageUrl}
-                    alt="Imagen personalizada de la pregunta"
+                    alt={`Imagen de apoyo para la pregunta ${card.id}`}
                     className="h-auto w-full rounded-md"
                     onError={() => setLocalCardImageMissing(true)}
                   />
@@ -672,7 +672,11 @@ export default function FlashcardsClient({ cards }) {
               <div className={`grid gap-2 ${questionImages.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
                 {questionImages.map((url, imageIndex) => (
                   <div key={`${card.id}-img-${imageIndex}`} className={styles.imageCard}>
-                    <img src={url} alt={`Imagen ${imageIndex + 1} de la pregunta`} className="h-auto w-full rounded-md" />
+                    <img
+                      src={url}
+                      alt={`Imagen ${imageIndex + 1} de la pregunta ${card.id}`}
+                      className="h-auto w-full rounded-md"
+                    />
                   </div>
                 ))}
               </div>
