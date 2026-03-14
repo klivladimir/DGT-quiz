@@ -23,8 +23,8 @@
 
 .topRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   gap: 10px;
   width: 100%;
 }
@@ -95,6 +95,55 @@
 
 .settingsTrigger {
   justify-self: end;
+}
+
+.topHistory {
+  min-width: 0;
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.historyItem {
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(18, 24, 40, 0.58);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.historyEmpty {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.historyDifficulty0 {
+  border-color: #ff5a5a;
+}
+
+.historyDifficulty1 {
+  border-color: #f4d657;
+}
+
+.historyDifficulty2 {
+  border-color: #3de07c;
+}
+
+.historyCorrect {
+  color: #3de07c;
+  font-weight: 700;
+}
+
+.historyWrong {
+  color: #ff5a5a;
+  font-weight: 700;
 }
 
 .metaRow {
@@ -438,5 +487,16 @@
     min-height: 44px;
     font-size: 0.68rem;
     letter-spacing: 0.06em;
+  }
+
+  .topHistory {
+    gap: 6px;
+  }
+
+  .historyItem {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    font-size: 0.72rem;
   }
 }

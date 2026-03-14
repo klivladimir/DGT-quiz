@@ -95,6 +95,12 @@ function ratingToDifficulty(nextRating) {
   return 0;
 }
 
+function getHistoryDifficultyClass(difficulty) {
+  if (difficulty === 0) return styles.historyDifficulty0;
+  if (difficulty === 1) return styles.historyDifficulty1;
+  return styles.historyDifficulty2;
+}
+
 function getOptionClass(state) {
   if (state === "correct") return `${styles.optionBtn} ${styles.optionCorrect}`;
   if (state === "wrong") return `${styles.optionBtn} ${styles.optionWrong}`;
@@ -546,6 +552,9 @@ export default function FlashcardsClient({ cards }) {
   const canRate = Boolean(selectedOption) && !checked && !(isTranslationActive && !translatedCard);
   const shownCard = currentCard || card;
   const questionImages = Array.isArray(card.questionImages) ? card.questionImages : [];
+  const currentCardHistory = Array.isArray(answerMemoryByCard[card.id]) ? answerMemoryByCard[card.id] : [];
+  const topHistorySlots = [...currentCardHistory.slice(-3)];
+  while (topHistorySlots.length < 3) topHistorySlots.unshift(null);
 
   return (
     <>
@@ -560,6 +569,29 @@ export default function FlashcardsClient({ cards }) {
               >
                 {currentLanguageLabel}
               </Button>
+
+              <div className={styles.topHistory} aria-label="Últimas 3 respuestas">
+                {topHistorySlots.map((entry, idx) => {
+                  if (!entry) {
+                    return <span key={`empty-${idx}`} className={`${styles.historyItem} ${styles.historyEmpty}`} />;
+                  }
+
+                  const isCorrect = Boolean(entry[0]);
+                  const difficulty = Number(entry[1]);
+                  const icon = isCorrect ? "✓" : "✕";
+                  const iconClass = isCorrect ? styles.historyCorrect : styles.historyWrong;
+
+                  return (
+                    <span
+                      key={`history-${idx}-${isCorrect ? "t" : "f"}-${difficulty}`}
+                      className={`${styles.historyItem} ${getHistoryDifficultyClass(difficulty)}`}
+                    >
+                      <span className={iconClass}>{icon}</span>
+                    </span>
+                  );
+                })}
+              </div>
+
               <Button
                 size="sm"
                 variant={isSettingsOpen ? "default" : "outline"}
