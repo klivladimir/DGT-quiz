@@ -222,7 +222,6 @@ export default function FlashcardsClient({ cards }) {
   const [isProgressHydrated, setIsProgressHydrated] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [preferredLanguageCodes, setPreferredLanguageCodes] = useState([]);
-  const [localCardImageMissing, setLocalCardImageMissing] = useState(false);
 
   const total = cards.length;
   const fallbackCardIndex = Math.min(total - 1, Math.max(0, position));
@@ -487,10 +486,6 @@ export default function FlashcardsClient({ cards }) {
     };
   }, [card, isTranslationActive, translatedCard, cardTranslationKey, activeLanguage]);
 
-  useEffect(() => {
-    setLocalCardImageMissing(false);
-  }, [card?.id]);
-
   function goPrev() {
     setPosition((current) => Math.max(0, current - 1));
     setSelectedOption(null);
@@ -599,8 +594,7 @@ export default function FlashcardsClient({ cards }) {
   const optionDisabled = checked || (isTranslationActive && !translatedCard);
   const canRate = Boolean(selectedOption) && !checked && !(isTranslationActive && !translatedCard);
   const shownCard = currentCard || card;
-  const questionImages = Array.isArray(card.questionImages) ? card.questionImages : [];
-  const localCardImageUrl = `/api/card-image/${encodeURIComponent(card.id)}`;
+  const questionImage = typeof card.questionImage === "string" ? card.questionImage : "";
   const currentCardHistory = Array.isArray(answerMemoryByCard[card.id]) ? answerMemoryByCard[card.id] : [];
   const topHistorySlots = [...currentCardHistory.slice(-3)];
   while (topHistorySlots.length < 3) topHistorySlots.unshift(null);
@@ -609,7 +603,7 @@ export default function FlashcardsClient({ cards }) {
     <>
       <main className={styles.shell}>
         <Card className={styles.frame}>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3"> 
             <div className={styles.topRow}>
               <Button
                 size="sm"
@@ -657,28 +651,16 @@ export default function FlashcardsClient({ cards }) {
             </h3>
             <p className={styles.questionId}>ID: {card.id}</p>
 
-            {!localCardImageMissing ? (
+            {questionImage ? (
               <div className="grid grid-cols-1 gap-2">
                 <div className={styles.imageCard}>
                   <img
-                    src={localCardImageUrl}
-                    alt={`Imagen de apoyo para la pregunta ${card.id}`}
+                    src={questionImage}
+                    alt={`Imagen de la pregunta ${card.id}`}
                     className="h-auto w-full rounded-md"
-                    onError={() => setLocalCardImageMissing(true)}
                   />
+                  <div className="text-xs text-end text-slate-300">AI generated image. Be careful.</div>
                 </div>
-              </div>
-            ) : questionImages.length > 0 ? (
-              <div className={`grid gap-2 ${questionImages.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
-                {questionImages.map((url, imageIndex) => (
-                  <div key={`${card.id}-img-${imageIndex}`} className={styles.imageCard}>
-                    <img
-                      src={url}
-                      alt={`Imagen ${imageIndex + 1} de la pregunta ${card.id}`}
-                      className="h-auto w-full rounded-md"
-                    />
-                  </div>
-                ))}
               </div>
             ) : null}
 
