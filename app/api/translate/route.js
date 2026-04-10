@@ -60,10 +60,9 @@ async function translateChunk(chunk, target) {
 
 async function translateText(text, target) {
   const chunks = splitText(text);
-  const translated = [];
-  for (const chunk of chunks) {
-    translated.push(await translateChunk(chunk, target));
-  }
+  const translated = await Promise.all(
+    chunks.map((chunk) => translateChunk(chunk, target))
+  );
   return translated.join(" ").trim();
 }
 
