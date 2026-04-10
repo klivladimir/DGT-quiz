@@ -2,3 +2,5 @@ node_modules
 .next
 out
 session/todotest-storage.json
+toBegenerated/
+toBegenerated/
