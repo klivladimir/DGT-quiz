@@ -1,0 +1,477 @@
+id,question,url,reason
+
+
+4-4,"Después de adelantar al camión, ¿debe regresar inmediatamente al carril de la derecha si pretende seguir adelantando?",https://www.todotest.com/tests/imgs/0047.jpg,a_visual_noun_plus_ref
+4-5,"A partir de la señal que se muestra en la imagen, ¿qué limitaciones existen para los turismos?",https://www.todotest.com/tests/imgs/s21a.jpg,q_image_like|q_shown_appears|q_sign_or_marking_desc
+4-8,"Un peatón que empuja un vehículo de dos ruedas, ¿por dónde está obligado a circular?",https://www.todotest.com/tests/imgs/0839.jpg,a_visual_noun_plus_ref
+4-10,"El vehículo que se observa en la parte derecha de la fotografía, ¿está correctamente estacionado?",https://www.todotest.com/tests/imgs/0054.jpg,q_image_like|q_shown_appears
+4-11,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/s60b.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+4-14,"Situado en un vehículo, ¿qué identifica la señal V-25 Distintivo ambiental?",https://www.todotest.com/tests/imgs/1950.jpg,q_sign_or_marking_desc
+4-27,¿Qué indica la señalización de este vehículo?,https://www.todotest.com/tests/imgs/0051.jpg,q_deictic_vehicle|q_sign_or_marking_desc
+4-28,En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?,https://www.todotest.com/tests/imgs/0052.jpg,q_sign_or_marking_desc
+4-29,Esta señal indica...,https://www.todotest.com/tests/imgs/r3.jpg,q_sign_like|q_sign_or_marking_desc
+5-2,"¿Qué función tienen las guías sonoras situadas en el borde derecho de la calzada, ubicadas normalmente en el arcén coincidiendo con la marca vial que delimita el carril derecho?",https://www.todotest.com/tests/imgs/1970.jpg,q_sign_or_marking_desc|q_marking_hard
+5-8,¿Qué indica la señal de la imagen?,https://www.todotest.com/tests/imgs/1975.jpg,q_image_like|q_sign_or_marking_desc
+5-21,Conduce un turismo con un remolque de un solo eje. ¿Le afecta esta señal?,https://www.todotest.com/tests/imgs/r112.jpg,q_sign_like|q_sign_or_marking_desc
+5-22,"A partir de la señal, ¿cuál es la velocidad máxima en una vía con tres carriles por sentido?",https://www.todotest.com/tests/imgs/s500_2.jpg,q_sign_or_marking_desc
+6-9,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/s3.jpg,q_sign_like|q_sign_or_marking_desc
+6-13,¿Cuándo está permitido utilizar las señales acústicas?,https://www.todotest.com/tests/imgs/0084.jpg,q_sign_or_marking_desc
+6-16,"En un paso a nivel, ¿qué debe hacer si la barrera está subiendo?",https://www.todotest.com/tests/imgs/0366.jpg,a_visual_noun_plus_ref
+6-30,"En un tramo recto, de noche, sin condiciones atmosféricas adversas, ¿es correcto el alumbrado que lleva encendido este vehículo?",https://www.todotest.com/tests/imgs/0076.jpg,q_deictic_vehicle
+7-3,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/p15.jpg,q_sign_like|q_sign_or_marking_desc
+7-4,"El tractor agrícola de la fotografía, de MMA inferior a 3500 kg., ¿circula correctamente?",https://www.todotest.com/tests/imgs/0086.jpg,q_image_like
+7-8,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r309.jpg,q_sign_like|q_sign_or_marking_desc
+7-10,"En esta vía urbana con dos carriles para cada sentido que no tiene líneas de separación de carriles, ¿por qué carril se debe circular?",https://www.todotest.com/tests/imgs/0500.jpg,q_deictic_road|a_visual_noun_plus_ref
+7-17,El personal de obras de la fotografía le está ordenando que se detenga. ¿Está obligado a obedecerle?,https://www.todotest.com/tests/imgs/0087.jpg,q_image_like
+7-22,"Básicamente, ¿qué puede observar el conductor mirando por los espejos retrovisores?",https://www.todotest.com/tests/imgs/0274.jpg,a_visual_noun_plus_ref
+7-23,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r116.jpg,q_sign_like|q_sign_or_marking_desc
+7-26,¿Está permitido parar o estacionar en un paso para peatones y en sus proximidades?,https://www.todotest.com/tests/imgs/0089.jpg,q_marking_hard|a_marking_hard
+8-3,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/0066.jpg,q_sign_like|q_sign_or_marking_desc
+8-4,"A la vista de esta señal, ¿debe facilitar la incorporación de los vehículos que se incorporen por la derecha?",https://www.todotest.com/tests/imgs/0100.jpg,q_sign_like|q_sign_or_marking_desc
+8-9,"En esta calzada de sentido único y tres carriles, ¿está bien situado el vehículo para realizar un cambio de dirección a la izquierda?",https://www.todotest.com/tests/imgs/0137.jpg,q_deictic_road
+8-18,Estas marcas viales indican que...,https://www.todotest.com/tests/imgs/0101.jpg,q_sign_or_marking_desc|q_marking_hard
+8-19,Esta señal indica fin de...,https://www.todotest.com/tests/imgs/r500.jpg,q_sign_like|q_sign_or_marking_desc
+8-28,Esta carretera tiene más de 6 m de ancho. ¿Es correcto circular por encima de las líneas que separan los carriles?,https://www.todotest.com/tests/imgs/0108.jpg,q_deictic_road
+8-30,Esta señal ...,https://www.todotest.com/tests/imgs/r308.jpg,q_sign_like|a_sign_or_marking_desc
+9-12,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/p24.jpg,q_sign_or_marking_desc
+9-14,En esta vía interurbana es obligatorio utilizar la luz corta...,https://www.todotest.com/tests/imgs/0114.jpg,q_deictic_road
+9-16,Esta señal...,https://www.todotest.com/tests/imgs/r204.jpg,q_sign_like
+9-25,Esta señal indica el lugar a partir del cual...,https://www.todotest.com/tests/imgs/r500.jpg,q_sign_like|q_sign_or_marking_desc
+9-26,"Estas señales, sobre una carretera convencional, indican salida inmediata hacia...",https://www.todotest.com/tests/imgs/s360.jpg,q_sign_like|q_sign_or_marking_desc
+9-30,Esta señal indica...,https://www.todotest.com/tests/imgs/s33.jpg,q_sign_like|q_sign_or_marking_desc
+10-1,"Esta señal prohíbe el acceso a vehículos destinados al transporte de mercancías, entendiendo como tales...",https://www.todotest.com/tests/imgs/r106.jpg,q_sign_like|q_sign_or_marking_desc
+10-5,¿Está permitido que un turismo utilice un tramo de carril reservado para autobuses delimitado por una línea discontinua?,https://www.todotest.com/tests/imgs/0213.jpg,q_sign_or_marking_desc|q_marking_hard
+10-11,"En esta vía de doble sentido de circulación, ¿por dónde adelantará al tranvía que circula por el centro de la calzada?",https://www.todotest.com/tests/imgs/0131.jpg,q_deictic_road
+10-20,Esta señal indica la situación de...,https://www.todotest.com/tests/imgs/s970.jpg,q_sign_like|q_sign_or_marking_desc
+10-22,"Con esta señal, ¿tiene prioridad de paso en el estrechamiento?",https://www.todotest.com/tests/imgs/r6.jpg,q_sign_like|q_sign_or_marking_desc
+10-23,"En este tramo de autovía, ¿se puede circular a más de 100 km/h para adelantar?",https://www.todotest.com/tests/imgs/0125.jpg,q_deictic_road
+11-7,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r308f.jpg,q_sign_like|q_sign_or_marking_desc
+11-8,"De las señales que realiza este conductor, ¿cuál prevalece?",https://www.todotest.com/tests/imgs/0719.jpg,q_deictic_vehicle|q_sign_or_marking_desc
+11-11,Esta señal indica la situación de...,https://www.todotest.com/tests/imgs/s34.jpg,q_sign_like|q_sign_or_marking_desc
+11-12,¿De qué peligro advierte la señal?,https://www.todotest.com/tests/imgs/p20a.jpg,q_sign_or_marking_desc
+11-14,¿Qué indica la flecha pintada en la calzada?,https://www.todotest.com/tests/imgs/0139.jpg,a_marking_hard
+11-17,Esta señal ...,https://www.todotest.com/tests/imgs/p31.jpg,q_sign_like
+11-19,"En un paso para peatones, ¿está permitido parar o estacionar?",https://www.todotest.com/tests/imgs/0978.jpg,q_marking_hard
+11-20,Esta señal...,https://www.todotest.com/tests/imgs/s11.jpg,q_sign_like
+11-21,¿Qué le indican estas señales?,https://www.todotest.com/tests/imgs/0140.jpg,q_sign_like|q_sign_or_marking_desc
+11-26,"En un tramo estrecho de gran pendiente, sin señal de prioridad, que no permite el paso de dos vehículos, tiene prioridad el vehículo que circula...",https://www.todotest.com/tests/imgs/1106.jpg,q_sign_or_marking_desc
+12-6,Entra en esta curva a mucha velocidad. ¿Qué puede pasar?,https://www.todotest.com/tests/imgs/0152.jpg,q_deictic_road|a_visual_noun_plus_ref
+12-7,"En esta intersección, los conductores están obligados a detenerse...",https://www.todotest.com/tests/imgs/0153.jpg,q_deictic_road|a_marking_hard
+12-19,"Si observa que el vehículo blanco acaba de iniciar un desplazamiento al carril de la izquierda, ¿puede iniciar la maniobra de adelantamiento?",https://www.todotest.com/tests/imgs/0148.jpg,q_shown_appears
+12-21,"Circula por una vía y se encuentra a este agente, ¿qué indica con la bandera roja?",https://www.todotest.com/tests/imgs/poli_moto_1.jpg,a_visual_noun_plus_ref
+12-22,Esta señal indica dirección y sentido...,https://www.todotest.com/tests/imgs/0106.jpg,q_sign_like|q_sign_or_marking_desc
+12-23,"Una señal de prohibición junto a una señal de localización de población, ¿prohíbe en toda la población?",https://www.todotest.com/tests/imgs/0642.jpg,q_sign_or_marking_desc
+12-25,¿Es aconsejable llevar el cinturón de seguridad con este tipo de abrigo?,https://www.todotest.com/tests/imgs/0720.jpg,q_is_this_pattern
+13-11,"Al llegar a una plaza se encuentra esta señal, ¿puede cambiar de sentido?",https://www.todotest.com/tests/imgs/r402.jpg,q_sign_like|q_sign_or_marking_desc
+13-17,"En la intersección de la imagen, ¿quién tendrá preferencia de paso?",https://www.todotest.com/tests/imgs/1952.jpg,q_image_like
+13-23,¿Está permitido parar a la vista de la señal en el sentido que indica la flecha?,https://www.todotest.com/tests/imgs/r307c.jpg,q_sign_or_marking_desc
+13-26,"En una intersección hay un semáforo en verde y una señal de stop, ¿a cuál se debe obedecer?",https://www.todotest.com/tests/imgs/0163.jpg,q_sign_or_marking_desc
+14-1,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/r301.jpg,q_sign_like|q_sign_or_marking_desc
+14-5,"La señal, ¿qué indica?",https://www.todotest.com/tests/imgs/p17a.jpg,a_visual_noun_plus_ref|q_sign_or_marking_desc
+14-7,¿Qué indican estas marcas viales?,https://www.todotest.com/tests/imgs/0184.jpg,q_sign_or_marking_desc|q_marking_hard
+14-12,"Un conjunto de turismo con remolque ligero, que mide menos de 7 metros, ¿por dónde debe circular?",https://www.todotest.com/tests/imgs/s53c.jpg,a_visual_noun_plus_ref
+14-14,Este panel deberá colocarse...,https://www.todotest.com/tests/imgs/v20.jpg,q_sign_like
+14-20,En un cruce no hay señales de preferencia. ¿Debe ceder el paso a un tranvía?,https://www.todotest.com/tests/imgs/0327.jpg,q_sign_or_marking_desc
+14-21,¿A qué velocidad máxima puede circular un turismo por esta carretera convencional?,https://www.todotest.com/tests/imgs/0178.jpg,q_deictic_road
+14-26,"En esta situación, ¿qué debe hacer?",https://www.todotest.com/tests/imgs/poli_1.jpg,q_this_situation
+14-28,Estas señales significan...,https://www.todotest.com/tests/imgs/s235a.jpg,q_sign_like|q_sign_or_marking_desc
+14-29,Esta señal prohíbe...,https://www.todotest.com/tests/imgs/r110.jpg,q_sign_like|q_sign_or_marking_desc
+15-2,La señal indica que...,https://www.todotest.com/tests/imgs/s11.jpg,q_sign_or_marking_desc
+15-10,Hay muchos vehículos circulando y prevé que va a quedar detenido en el paso para peatones. ¿Debe entrar en el paso?,https://www.todotest.com/tests/imgs/0742.jpg,q_marking_hard
+15-15,"Cuando su vehículo quede inmovilizado de noche en el arcén de esta vía, ¿qué luces debe dejar encendidas?",https://www.todotest.com/tests/imgs/0198.jpg,q_deictic_road
+15-17,En esta vía un ciclomotor tiene que circular por...,https://www.todotest.com/tests/imgs/0189.jpg,q_deictic_road
+15-27,"En esta situación, ¿cuál es la distancia de seguridad entre vehículos?",https://www.todotest.com/tests/imgs/0190.jpg,q_this_situation
+15-29,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s852.jpg,q_sign_like|q_sign_or_marking_desc
+16-6,En esta carretera estrecha quiere realizar un cambio de sentido. ¿Dónde debe colocarse para no molestar a otros vehículos?,https://www.todotest.com/tests/imgs/0170.jpg,q_deictic_road
+16-7,"A la vista de la señal, ¿es obligatorio detenerse para dejar pasar a un vehículo que circula en sentido contrario?",https://www.todotest.com/tests/imgs/0200.jpg,q_sign_or_marking_desc
+16-11,Esta señal indica...,https://www.todotest.com/tests/imgs/s123.jpg,q_sign_like|q_sign_or_marking_desc
+16-13,En caso de incendio en un túnel debe...,https://www.todotest.com/tests/imgs/0514.jpg,a_visual_noun_plus_ref
+16-18,"Encuentra estas dos señales, ¿a cuál debe obedecer?",https://www.todotest.com/tests/imgs/0206.jpg,q_sign_or_marking_desc
+16-25,¿Cuál es la velocidad máxima permitida en esta vía para un camión de 3500 kg de MMA?,https://www.todotest.com/tests/imgs/0178.jpg,q_deictic_road
+16-27,Los animales conducidos en manada o en rebaño...,https://www.todotest.com/tests/imgs/0212.jpg,a_visual_noun_plus_ref
+16-29,"La señal de la derecha, ¿qué indica?",https://www.todotest.com/tests/imgs/0207.jpg,q_sign_or_marking_desc
+16-30,Esta señal indica peligro ante la proximidad...,https://www.todotest.com/tests/imgs/p5.jpg,q_sign_like|q_sign_or_marking_desc
+17-1,"En esta intersección entre una vía pavimentada y otra sin pavimentar, ¿debe ceder el paso a este vehículo?",https://www.todotest.com/tests/imgs/0721.jpg,q_deictic_vehicle|q_deictic_road
+17-5,Ante esta situación...,https://www.todotest.com/tests/imgs/0214.jpg,q_this_situation
+17-9,"Los paneles de las esquinas del camión, ¿qué indican?",https://www.todotest.com/tests/imgs/0215.jpg,q_sign_or_marking_desc
+17-20,"Después de la señal vertical, ¿está permitido adelantar al vehículo blanco?",https://www.todotest.com/tests/imgs/0219.jpg,q_sign_or_marking_desc
+17-21,"Una motocicleta, ¿puede circular por la vía señalizada con esta señal?",https://www.todotest.com/tests/imgs/r407b.jpg,q_sign_like|q_sign_or_marking_desc
+17-22,"Un turismo que lleve esta señal de minusválido, ¿puede circular por un carril VAO?",https://www.todotest.com/tests/imgs/v15.jpg,q_sign_like|q_sign_or_marking_desc
+17-23,La señal prohíbe la entrada a...,https://www.todotest.com/tests/imgs/r102.jpg,q_sign_or_marking_desc
+18-1,"De noche en un tramo con muchas curvas, señalizadas con la señal de curvas peligrosas, ¿está permitido circular con la luz antiniebla delantera?",https://www.todotest.com/tests/imgs/p14b.jpg,q_sign_or_marking_desc
+18-8,"El vehículo de la fotografía tiene encendida únicamente la señalización luminosa, ¿tiene prioridad de paso?",https://www.todotest.com/tests/imgs/0226.jpg,q_image_like|q_sign_or_marking_desc
+18-10,¿Puede rebasar la velocidad máxima indicada en la señal?,https://www.todotest.com/tests/imgs/0228.jpg,q_sign_or_marking_desc
+18-11,"En este tramo de carretera, ¿está permitido hacer un cambio de sentido?",https://www.todotest.com/tests/imgs/0230.jpg,q_deictic_road
+18-15,Esta señal prohíbe el paso a...,https://www.todotest.com/tests/imgs/r201.jpg,q_sign_like|q_sign_or_marking_desc
+18-18,El conductor del vehículo de la fotografía está indicando que va a...,https://www.todotest.com/tests/imgs/0722.jpg,q_image_like
+18-29,La señal significa...,https://www.todotest.com/tests/imgs/s51.jpg,q_sign_or_marking_desc
+19-4,"Un conjunto de vehículos, cuya longitud es de 7,30 metros, circula por una vía con tres carriles por sentido de la circulación, ¿qué carriles puede utilizar?",https://www.todotest.com/tests/imgs/0039.jpg,a_visual_noun_plus_ref
+19-8,¿Tiene permitido una motocicleta estacionar en una zona delimitada por marcas viales azules?,https://www.todotest.com/tests/imgs/0195.jpg,q_sign_or_marking_desc|q_marking_hard
+19-10,"A partir de esta señal está obligado a llevar encendido, al menos, el alumbrado de...",https://www.todotest.com/tests/imgs/r413.jpg,q_sign_like
+19-12,"La línea longitudinal discontinua ancha, ¿qué indica?",https://www.todotest.com/tests/imgs/0236.jpg,q_sign_or_marking_desc|q_marking_hard
+19-15,Esta señal prohíbe...,https://www.todotest.com/tests/imgs/r204a.jpg,q_sign_like|q_sign_or_marking_desc
+19-16,"En una vía con esta señalización se encuentra con un rebaño, ¿debe ceder el paso a los animales?",https://www.todotest.com/tests/imgs/0237.jpg,q_sign_like|q_sign_or_marking_desc
+19-19,"En caso de activarse el sistema avanzado de ayuda a la conducción “AEBS”, ¿de qué forma actuará?",https://www.todotest.com/tests/imgs/0711.jpg,a_visual_noun_plus_ref
+19-21,"En esta vía urbana, ¿está permitido adelantar por la derecha?",https://www.todotest.com/tests/imgs/0743.jpg,q_deictic_road
+19-23,"Si es necesario avisar a un ciclista con señales acústicas, ¿cómo deben realizarse?",https://www.todotest.com/tests/imgs/0445.jpg,q_sign_or_marking_desc
+19-25,"En la vía de la fotografía, ¿qué carril debe utilizar para circular, como norma general?",https://www.todotest.com/tests/imgs/0240.jpg,q_image_like|a_visual_noun_plus_ref
+20-4,¿Está permitido adelantar por la derecha si existe espacio suficiente?,https://www.todotest.com/tests/imgs/0553.jpg,a_marking_hard
+20-7,"En una travesía sin señales de velocidad, ¿cuál es la velocidad máxima permitida?",https://www.todotest.com/tests/imgs/0252.jpg,q_sign_or_marking_desc
+20-12,¿Qué le indica la señal?,https://www.todotest.com/tests/imgs/0635.jpg,q_sign_or_marking_desc
+20-14,Si conduce con lluvia...,https://www.todotest.com/tests/imgs/0617.jpg,a_visual_noun_plus_ref
+20-15,Esta señal de advertencia de peligro indica la proximidad de...,https://www.todotest.com/tests/imgs/p17.jpg,q_sign_like|q_sign_or_marking_desc
+20-16,¿Qué indica este panel bajo la señal de ceda el paso?,https://www.todotest.com/tests/imgs/0093.jpg,q_sign_like|q_sign_or_marking_desc
+20-17,Esta señal situada sobre un carril de un puesto de peaje indica que en él...,https://www.todotest.com/tests/imgs/s32.jpg,q_sign_like|q_sign_or_marking_desc
+20-21,"Entre los siguientes tipos de señales, ¿cuál es el orden de prioridad?",https://www.todotest.com/tests/imgs/0265.jpg,q_sign_or_marking_desc
+20-22,Esta señal...,https://www.todotest.com/tests/imgs/r203.jpg,q_sign_like
+20-26,"En esta vía, ¿está permitido superar la velocidad máxima genérica de la vía para adelantar?",https://www.todotest.com/tests/imgs/0248.jpg,q_deictic_road
+20-29,¿Tiene que ceder el paso a este autobús que quiere incorporarse a la circulación?,https://www.todotest.com/tests/imgs/0740.jpg,q_deictic_vehicle|q_is_this_pattern
+21-1,"En esta intersección con los semáforos en amarillo intermitente, ¿qué debe hacer?",https://www.todotest.com/tests/imgs/0265.jpg,q_deictic_road
+21-12,"Un camión, ¿puede entrar en una vía con esta señal?",https://www.todotest.com/tests/imgs/r107.jpg,q_sign_like|q_sign_or_marking_desc
+21-19,¿Puede circular conduciendo un ciclomotor por una vía interurbana sin arcén?,https://www.todotest.com/tests/imgs/0378.jpg,a_visual_noun_plus_ref
+21-20,"Una línea longitudinal discontinua con los trazos muy juntos, ¿qué indica?",https://www.todotest.com/tests/imgs/0523.jpg,q_sign_or_marking_desc|q_marking_hard
+21-23,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/p19.jpg,q_sign_like|q_sign_or_marking_desc
+21-26,Esta señal ¿permite entrar a un turismo en la vía en la que esté colocada?,https://www.todotest.com/tests/imgs/r103.jpg,q_sign_like|q_sign_or_marking_desc
+21-30,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/s24.jpg,q_sign_or_marking_desc
+22-4,La señal indica...,https://www.todotest.com/tests/imgs/p27.jpg,q_sign_or_marking_desc
+22-6,¿La señal permite realizar la maniobra de adelantamiento a un vehículo de motor?,https://www.todotest.com/tests/imgs/r305.jpg,q_sign_or_marking_desc
+22-9,¿Cuál es la principal causa de los accidentes por alcance?,https://www.todotest.com/tests/imgs/0269.jpg,a_visual_noun_plus_ref
+22-11,Ante esta situación:,https://www.todotest.com/tests/imgs/0271.jpg,q_this_situation
+22-12,Esta señal indica que...,https://www.todotest.com/tests/imgs/s25.jpg,q_sign_like|q_sign_or_marking_desc
+22-20,"El conductor de un vehículo que observa que va a ser adelantado, debe...",https://www.todotest.com/tests/imgs/0219.jpg,q_shown_appears
+22-21,¿Está permitido que las motocicletas circulen por un carril VAO?,https://www.todotest.com/tests/imgs/s51b.jpg,a_visual_noun_plus_ref
+22-23,"Este panel, colocado bajo la señal de ceda el paso, indica la distancia...",https://www.todotest.com/tests/imgs/s840.jpg,q_sign_like|q_sign_or_marking_desc
+22-27,Esta señal indica...,https://www.todotest.com/tests/imgs/r6.jpg,q_sign_like|q_sign_or_marking_desc
+22-28,"Al aproximarnos a un autobús con esta señal en su parte posterior y que se encuentra parado recogiendo pasajeros, se deberá:",https://www.todotest.com/tests/imgs/v10.jpg,q_sign_like
+22-30,"En este tramo de vía de visibilidad reducida, ¿está permitido realizar un cambio de sentido?",https://www.todotest.com/tests/imgs/0267.jpg,q_deictic_road
+23-2,La señal indica...,https://www.todotest.com/tests/imgs/p29.jpg,q_sign_or_marking_desc
+23-13,"Delante de un vado, esta señal prohíbe...",https://www.todotest.com/tests/imgs/r308e.jpg,q_sign_like|q_sign_or_marking_desc
+23-18,Esta señal indica...,https://www.todotest.com/tests/imgs/s1.jpg,q_sign_like|q_sign_or_marking_desc
+23-21,"Este vehículo circula por un carril habilitado en sentido contrario al habitual, ¿puede desplazarse al carril normal de circulación?",https://www.todotest.com/tests/imgs/0387.jpg,q_deictic_vehicle
+23-25,"Una motocicleta, ¿puede disponer de señal de emergencia?",https://www.todotest.com/tests/imgs/0818.jpg,q_sign_or_marking_desc
+23-26,La señal ...,https://www.todotest.com/tests/imgs/p50.jpg,a_sign_or_marking_desc
+24-3,"El vehículo de la fotografía, ¿puede continuar la marcha?",https://www.todotest.com/tests/imgs/0730.jpg,q_image_like
+24-5,"A la vista de la señal, ¿qué separación debe dejar con el vehículo que circula delante?",https://www.todotest.com/tests/imgs/r300.jpg,q_sign_or_marking_desc
+24-7,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/p2.jpg,q_sign_or_marking_desc
+24-9,"Circula por una vía interurbana y observa que nieva de forma ligera, ¿puede emplear el alumbrado antiniebla?",https://www.todotest.com/tests/imgs/0438.jpg,q_shown_appears
+24-14,"Los conductores de vehículos especiales que están obligados a utilizar la señal V-2, ¿cuándo la utilizarán?",https://www.todotest.com/tests/imgs/0283.jpg,q_sign_or_marking_desc
+24-17,Si circulamos por una vía donde hay una línea longitudinal continua adosada a otra discontinua...,https://www.todotest.com/tests/imgs/0020.jpg,q_marking_hard
+24-18,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s34.jpg,q_sign_like|q_sign_or_marking_desc
+24-24,Este vehículo está averiado y circula muy despacio con la luz de emergencia encendida. ¿Es correcto?,https://www.todotest.com/tests/imgs/0284.jpg,q_deictic_vehicle
+24-26,"En esta autopista dentro de poblado, ¿a qué velocidad puede circular como máximo si no existe señalización?",https://www.todotest.com/tests/imgs/0285.jpg,q_sign_or_marking_desc
+24-27,La señal triangular indica...,https://www.todotest.com/tests/imgs/p19.jpg,q_sign_or_marking_desc
+25-6,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r5.jpg,q_sign_like|q_sign_or_marking_desc
+25-10,Esta señal indica...,https://www.todotest.com/tests/imgs/s61a.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+25-21,Esta señal...,https://www.todotest.com/tests/imgs/r412.jpg,q_sign_like
+25-24,"En vías interurbanas, los ciclos y ciclomotores de dos ruedas, ¿dónde deben situarse para girar a la izquierda?",https://www.todotest.com/tests/imgs/0293.jpg,a_visual_noun_plus_ref
+25-28,"Esta señalización, le indica la distancia...",https://www.todotest.com/tests/imgs/0116.jpg,q_sign_like|q_sign_or_marking_desc
+25-29,"Si circula con un vehículo para personas de movilidad reducida, ¿le afecta esta señal?",https://www.todotest.com/tests/imgs/r105.jpg,q_sign_like|q_sign_or_marking_desc
+26-3,¿Tienen permitido las bicicletas circular en posición paralela?,https://www.todotest.com/tests/imgs/0302.jpg,a_visual_noun_plus_ref
+26-9,"En esta vía, deben obedecer sólo a las indicaciones situadas a su izquierda los que pretendan...",https://www.todotest.com/tests/imgs/0731.jpg,q_deictic_road
+26-14,"En este tramo de vía, ¿cuál es la velocidad máxima?",https://www.todotest.com/tests/imgs/0299.jpg,q_deictic_road|a_sign_or_marking_desc
+26-15,¿Puede circular cualquier vehículo por esta calzada?,https://www.todotest.com/tests/imgs/r404.jpg,q_deictic_road|q_is_this_pattern
+26-17,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/s200.jpg,q_sign_like|q_sign_or_marking_desc
+26-18,Esta señal indica la proximidad de...,https://www.todotest.com/tests/imgs/p11a.jpg,q_sign_like|q_sign_or_marking_desc
+26-23,"En esta intersección, ¿se puede adelantar?",https://www.todotest.com/tests/imgs/0748.jpg,q_deictic_road
+27-5,"Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",https://www.todotest.com/tests/imgs/0310.jpg,q_sign_or_marking_desc
+27-12,"¿Qué función tienen las guías sonoras situadas en el borde derecho de la calzada, ubicadas normalmente en el arcén coincidiendo con la marca vial que delimita el carril derecho?",https://www.todotest.com/tests/imgs/1970.jpg,q_sign_or_marking_desc|q_marking_hard
+27-13,¿Qué debe hacer en esta situación?,https://www.todotest.com/tests/imgs/0105.jpg,q_this_situation
+27-15,¿Qué indican estas señales?,https://www.todotest.com/tests/imgs/0309.jpg,q_sign_like|q_sign_or_marking_desc
+27-19,"Circula por un carril y sobre él encuentra un semáforo con una luz roja en forma de aspa, ¿qué significa?",https://www.todotest.com/tests/imgs/0317.jpg,a_visual_noun_plus_ref
+27-29,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/s32.jpg,q_sign_or_marking_desc
+27-30,"En esta vía, deben obedecer sólo a las indicaciones situadas a su izquierda los que pretendan...",https://www.todotest.com/tests/imgs/0731.jpg,q_deictic_road
+28-13,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r200.jpg,q_sign_like|q_sign_or_marking_desc
+28-22,Esta señal indica la proximidad de...,https://www.todotest.com/tests/imgs/p14b.jpg,q_sign_like|q_sign_or_marking_desc
+28-25,¿Está permitido estacionar el día 16 a las ocho de la mañana en el lado de la calzada en que esté situada esta señal?,https://www.todotest.com/tests/imgs/r308c.jpg,q_sign_like|q_sign_or_marking_desc
+28-26,"Si circula en esta vía con tráfico denso, no puede cambiar de carril para ...",https://www.todotest.com/tests/imgs/0256.jpg,q_deictic_road
+28-28,En esta intersección ¿quién debe pasar primero?,https://www.todotest.com/tests/imgs/0319.jpg,q_deictic_road|a_visual_noun_plus_ref
+29-3,"En una carretera de tres carriles en cada sentido, ¿cuándo se puede circular por el carril izquierdo?",https://www.todotest.com/tests/imgs/0714.jpg,a_visual_noun_plus_ref
+29-12,Si encuentra esta señal a la entrada de una vía debe saber que...,https://www.todotest.com/tests/imgs/r407b.jpg,q_sign_like
+29-13,"Las señales de la fotografía, indican...",https://www.todotest.com/tests/imgs/0330.jpg,q_image_like|q_sign_or_marking_desc
+29-19,¿Quién tiene preferencia de paso en esta intersección?,https://www.todotest.com/tests/imgs/0327.jpg,q_deictic_road
+29-26,"Si inmoviliza el vehículo junto al borde de esta calzada, ¿incumple alguna norma de circulación?",https://www.todotest.com/tests/imgs/0329.jpg,q_deictic_road
+29-29,"En un tramo de vía con la señal ""túnel"", ¿está permitido hacer un cambio de sentido?",https://www.todotest.com/tests/imgs/s5.jpg,q_sign_or_marking_desc
+30-1,El vehículo rojo circula por el carril reversible que está abierto. ¿Puede atravesar la línea doble discontinua de su izquierda para adelantar?,https://www.todotest.com/tests/imgs/0339.jpg,q_marking_hard
+30-4,Esta señal indica...,https://www.todotest.com/tests/imgs/s19.jpg,q_sign_like|q_sign_or_marking_desc
+30-5,"Una autocaravana de 3600 kg de MMA, ¿a qué velocidad máxima puede circular por esta carretera convencional?",https://www.todotest.com/tests/imgs/0011.jpg,q_deictic_road
+30-7,"En esta vía, ¿por dónde debe circular un ciclomotor?",https://www.todotest.com/tests/imgs/0341.jpg,q_deictic_road
+30-11,Esta señal indica...,https://www.todotest.com/tests/imgs/s4.jpg,q_sign_like|q_sign_or_marking_desc
+30-13,"El vehículo de la imagen quiere cambiar de dirección a la derecha, ¿está obligado a detenerse?",https://www.todotest.com/tests/imgs/0008.jpg,q_image_like
+30-14,"En esta situación, ¿el vehículo rojo puede adelantar al vehículo inmovilizado?",https://www.todotest.com/tests/imgs/0338.jpg,q_this_situation
+30-15,"A la vista de esta imagen, ¿qué debe hacer el conductor del vehículo?",https://www.todotest.com/tests/imgs/poli_4.jpg,q_image_like
+30-23,"Ante esta señal, ¿qué se debe hacer?",https://www.todotest.com/tests/imgs/0337.jpg,q_sign_like|q_sign_or_marking_desc
+30-24,Esta señal prohíbe la entrada a...,https://www.todotest.com/tests/imgs/r105.jpg,q_sign_like|q_sign_or_marking_desc
+30-27,"Cuando la separación entre los trazos de una línea discontinua es sensiblemente más corta que en el caso general, ¿qué puede anunciar?",https://www.todotest.com/tests/imgs/0523.jpg,q_sign_or_marking_desc|q_marking_hard
+31-6,Este vehículo está inmovilizado por avería. ¿Debe advertirlo?,https://www.todotest.com/tests/imgs/0359.jpg,q_deictic_vehicle
+31-9,"En esta situación, ¿tienen prioridad de paso los animales?",https://www.todotest.com/tests/imgs/0079.jpg,q_this_situation
+31-12,"A la vista de la señal, ¿tienen preferencia de paso los animales domésticos cuando crucen la calzada?",https://www.todotest.com/tests/imgs/0358.jpg,q_sign_or_marking_desc
+31-17,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/0144.jpg,q_sign_like|q_sign_or_marking_desc
+31-22,"Esta línea discontinua, ¿qué indica?",https://www.todotest.com/tests/imgs/0178.jpg,q_sign_or_marking_desc|q_marking_hard
+32-1,Esta señal prohíbe ...,https://www.todotest.com/tests/imgs/r307.jpg,q_sign_like|q_sign_or_marking_desc
+32-3,"En esta vía de doble sentido de circulación y tres carriles, ¿dónde debe colocarse el vehículo azul para cambiar de dirección a la izquierda?",https://www.todotest.com/tests/imgs/0586.jpg,q_deictic_road
+32-16,"Esta señal, ¿prohíbe proseguir la marcha si no dispone de cadenas para nieve?",https://www.todotest.com/tests/imgs/r412.jpg,q_sign_like|q_sign_or_marking_desc
+32-21,"En esta vía circula por el carril que mejor conviene a su destino, ¿cuándo puede abandonarlo?",https://www.todotest.com/tests/imgs/0744.jpg,q_deictic_road
+32-27,Esta señal indica...,https://www.todotest.com/tests/imgs/s16.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+32-28,"En esta vía, si circula más rápido por el carril de la derecha, ¿se considera adelantamiento?",https://www.todotest.com/tests/imgs/0361.jpg,q_deictic_road
+32-30,¿Qué le indica la señal?,https://www.todotest.com/tests/imgs/0513.jpg,q_sign_or_marking_desc
+33-2,¿Qué indican las siguientes señales?,https://www.todotest.com/tests/imgs/0368.jpg,q_sign_or_marking_desc
+33-9,Si la separación entre los trazos de una línea longitudinal discontinua es sensiblemente más corta que en el caso general anuncia...,https://www.todotest.com/tests/imgs/0646.jpg,q_sign_or_marking_desc|q_marking_hard
+33-15,"Adelantar a varios vehículos a la vez, ¿está permitido?",https://www.todotest.com/tests/imgs/0376.jpg,a_visual_noun_plus_ref
+33-17,La señal que se observa en la fotografía obliga a mantener esa velocidad máxima en todo el poblado...,https://www.todotest.com/tests/imgs/0370.jpg,q_image_like|q_shown_appears|q_sign_or_marking_desc
+33-19,"Esta señal, en un carril de entrada a un peaje, obliga a quienes circulen por él a...",https://www.todotest.com/tests/imgs/r418.jpg,q_sign_like|q_sign_or_marking_desc
+33-28,¿Puede circular por este cebreado conduciendo un ciclomotor?,https://www.todotest.com/tests/imgs/0424.jpg,q_is_this_pattern|q_sign_or_marking_desc
+34-3,"A la vista de la señal que realiza el agente, ¿cuándo podrá reanudar la marcha?",https://www.todotest.com/tests/imgs/poli_2.jpg,q_sign_or_marking_desc
+34-11,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/r300a.jpg,q_sign_like|q_sign_or_marking_desc
+34-15,"En esta vía, ¿por dónde debe circular un ciclomotor?",https://www.todotest.com/tests/imgs/0020.jpg,q_deictic_road
+34-20,"En esta línea longitudinal discontinua, ¿qué indica una separación más corta de los trazos?",https://www.todotest.com/tests/imgs/0378.jpg,q_sign_or_marking_desc|q_marking_hard
+34-25,"En una intersección sin señalización expresa, la norma general de preferencia de paso es...",https://www.todotest.com/tests/imgs/0385.jpg,a_visual_noun_plus_ref
+34-27,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s61a.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+35-5,"Estas señales, sobre una carretera convencional, indican, desvío hacia...",https://www.todotest.com/tests/imgs/s360.jpg,q_sign_like|q_sign_or_marking_desc
+35-9,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/r303.jpg,q_sign_like|q_sign_or_marking_desc
+35-17,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r407b.jpg,q_sign_like|q_sign_or_marking_desc
+36-3,La señal indica...,https://www.todotest.com/tests/imgs/s127.jpg,q_sign_or_marking_desc
+36-9,La señal advierte peligro por...,https://www.todotest.com/tests/imgs/p28.jpg,q_sign_or_marking_desc
+36-17,"En esta intersección, ¿qué señal debe obedecer el vehículo azul para girar a la derecha?",https://www.todotest.com/tests/imgs/0399.jpg,q_deictic_road|q_sign_or_marking_desc
+36-21,Esta señal obliga a circular dentro del túnel con el alumbrado de...,https://www.todotest.com/tests/imgs/r413.jpg,q_sign_like|q_sign_or_marking_desc
+36-22,¿A qué vehículos prohíbe el adelantamiento esta señal?,https://www.todotest.com/tests/imgs/r306.jpg,q_sign_like|q_sign_or_marking_desc
+37-7,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r103.jpg,q_sign_like|q_sign_or_marking_desc
+37-8,¿Qué debe hacer ante las indicaciones de los agentes?,https://www.todotest.com/tests/imgs/0422.jpg,q_sign_or_marking_desc
+37-13,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/s123.jpg,q_sign_like|q_sign_or_marking_desc
+37-18,Para adelantar a este vehículo...,https://www.todotest.com/tests/imgs/0409.jpg,q_deictic_vehicle
+37-19,El conductor de este vehículo está indicando que va a...,https://www.todotest.com/tests/imgs/0723.jpg,q_deictic_vehicle
+37-22,¿Puede adelantar a partir de la señal vertical?,https://www.todotest.com/tests/imgs/0419.jpg,q_sign_or_marking_desc
+37-23,"Los conductores que llegan a un puente móvil cerrado o con la barrera o semibarrera en movimiento, deben...",https://www.todotest.com/tests/imgs/0474.jpg,a_visual_noun_plus_ref
+37-26,Esta señal indica peligro por...,https://www.todotest.com/tests/imgs/p33.jpg,q_sign_like|q_sign_or_marking_desc
+38-9,¿Qué está indicando este conductor?,https://www.todotest.com/tests/imgs/0723.jpg,q_deictic_vehicle
+38-11,Esta señal indica...,https://www.todotest.com/tests/imgs/s11a.jpg,q_sign_like|q_sign_or_marking_desc
+38-13,"En una zona de obras en la que se ha producido un estrechamiento de la calzada, ¿qué vehículo tendrá preferencia si no hay señal que la regule?",https://www.todotest.com/tests/imgs/0429.jpg,q_sign_or_marking_desc
+38-16,Este panel se coloca debajo de una señal de peligro para indicar...,https://www.todotest.com/tests/imgs/0368.jpg,q_sign_like
+38-23,En una intersección sin línea de detención. ¿Dónde hay que detenerse?,https://www.todotest.com/tests/imgs/0008.jpg,q_marking_hard
+38-26,En este tramo de autopista el vehículo negro no quiere adelantar. ¿Puede circular por el carril izquierdo?,https://www.todotest.com/tests/imgs/0425.jpg,q_deictic_road
+39-6,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/s15c.jpg,a_visual_noun_plus_ref|q_sign_or_marking_desc
+39-7,¿Qué está indicando este conductor con el brazo?,https://www.todotest.com/tests/imgs/0724.jpg,q_deictic_vehicle
+39-16,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/p16a.jpg,q_sign_like|q_sign_or_marking_desc
+39-19,"El vehículo azul quiere girar a la derecha, ¿a qué le obliga la señal de STOP?",https://www.todotest.com/tests/imgs/0070.jpg,q_sign_or_marking_desc
+39-23,"En una autopista, a partir de esta señal...",https://www.todotest.com/tests/imgs/r501.jpg,q_sign_like
+39-25,¿Por qué lado de la señal es obligatorio pasar?,https://www.todotest.com/tests/imgs/r401b.jpg,q_sign_or_marking_desc
+40-8,"Esta señal de peligro, ¿qué indica?",https://www.todotest.com/tests/imgs/p11a.jpg,q_sign_like|q_sign_or_marking_desc
+40-18,Las flechas de selección de carril...,https://www.todotest.com/tests/imgs/0124.jpg,a_sign_or_marking_desc
+40-19,¿Debe el conductor del turismo de color blanco respetar la señal de stop cuando llegue al cruce?,https://www.todotest.com/tests/imgs/0448.jpg,a_visual_noun_plus_ref|q_sign_or_marking_desc
+40-21,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/p28o.jpg,q_sign_like|q_sign_or_marking_desc
+40-24,¿Puede inmovilizar el vehículo en esta zona para bajar a recoger una mercancía abandonando el vehículo?,https://www.todotest.com/tests/imgs/0440.jpg,q_is_this_pattern
+40-27,¿A qué velocidad máxima puede circular una motocicleta por esta carretera convencional?,https://www.todotest.com/tests/imgs/0441.jpg,q_deictic_road
+41-8,"En esta vía de doble sentido, el vehículo rojo, ¿adelanta correctamente?",https://www.todotest.com/tests/imgs/0455.jpg,q_deictic_road
+41-14,¿Qué le indica la señal en esta vía de sentido único?,https://www.todotest.com/tests/imgs/0456.jpg,q_deictic_road|q_sign_or_marking_desc
+41-20,"En esta curva, ¿cómo debe circular?",https://www.todotest.com/tests/imgs/0460.jpg,q_deictic_road
+41-23,"A la vista de esta señalización, ¿está permitido circular por el carril derecho a 90 kilómetros por hora?",https://www.todotest.com/tests/imgs/0454.jpg,q_sign_like|q_sign_or_marking_desc
+41-25,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s19.jpg,q_sign_like|q_sign_or_marking_desc
+41-28,"El ciclista de la fotografía, ¿circula correctamente?",https://www.todotest.com/tests/imgs/0453.jpg,q_image_like
+42-19,"En un paso de peatones, ¿hay que hacer señales a los peatones para que crucen la calzada?",https://www.todotest.com/tests/imgs/0582.jpg,q_sign_or_marking_desc
+42-21,"Estas marcas viales, ¿qué indican?",https://www.todotest.com/tests/imgs/0466.jpg,q_sign_or_marking_desc|q_marking_hard
+42-26,"En un puesto de peaje, ¿qué se debe hacer?",https://www.todotest.com/tests/imgs/0475.jpg,a_sign_or_marking_desc
+43-7,Esta señal prohíbe la entrada a...,https://www.todotest.com/tests/imgs/r106.jpg,q_sign_like|q_sign_or_marking_desc
+43-12,¿Que señal debe obedecer?,https://www.todotest.com/tests/imgs/0206.jpg,q_sign_or_marking_desc
+43-26,"Este turismo con remolque, ¿a qué velocidad puede circular como máximo en una autovía?",https://www.todotest.com/tests/imgs/0477.jpg,q_deictic_vehicle
+43-27,La señal obliga...,https://www.todotest.com/tests/imgs/r401a.jpg,q_sign_or_marking_desc
+44-6,"Cuando encuentre estas señales, ¿qué debe hacer?",https://www.todotest.com/tests/imgs/0209.jpg,q_sign_like|q_sign_or_marking_desc
+44-7,Este panel con esta señal indica que está prohibido...,https://www.todotest.com/tests/imgs/0211.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+44-13,"En esta intersección, ¿qué vehículos están obligados a detenerse?",https://www.todotest.com/tests/imgs/0488.jpg,q_deictic_road
+44-14,"En una vía de doble sentido un vehículo va a girar a la izquierda, ¿debe facilitar el adelantamiento por la derecha a los demás vehículos?",https://www.todotest.com/tests/imgs/0218.jpg,a_visual_noun_plus_ref
+45-6,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/p11.jpg,q_sign_like|q_sign_or_marking_desc
+45-10,"A la vista de la señalización, ¿quién tiene preferencia de paso?",https://www.todotest.com/tests/imgs/s28.jpg,q_sign_or_marking_desc
+45-13,"En un paso estrecho, esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/r5.jpg,q_sign_like|q_sign_or_marking_desc
+45-20,"En una autopista con tres carriles para cada sentido, ¿qué distancia de seguridad debe dejar un turismo con el vehículo que circula delante?",https://www.todotest.com/tests/imgs/0713.jpg,a_visual_noun_plus_ref
+45-22,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/0498.jpg,q_sign_like|q_sign_or_marking_desc
+46-6,Este ciclista...,https://www.todotest.com/tests/imgs/0651.jpg,q_deictic_vehicle
+46-10,La señal prohíbe circular a más de 40 km/h. ¿Hasta dónde está prohibido?,https://www.todotest.com/tests/imgs/0512.jpg,q_sign_or_marking_desc
+46-11,Esta señal indica...,https://www.todotest.com/tests/imgs/p1b.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+46-18,"Cuando para realizar un cambio de sentido obstaculiza la marcha de los vehículos que circulan detrás, deberá...",https://www.todotest.com/tests/imgs/0652.jpg,a_visual_noun_plus_ref
+46-20,Esta señal indica la velocidad...,https://www.todotest.com/tests/imgs/0513.jpg,q_sign_like|q_sign_or_marking_desc
+46-22,"En esta vía con tres calzadas separadas, ¿por qué calzada debe circular?",https://www.todotest.com/tests/imgs/0653.jpg,q_deictic_road|a_visual_noun_plus_ref|a_sign_or_marking_desc
+46-24,Esta señal indica...,https://www.todotest.com/tests/imgs/s26a.jpg,q_sign_like|q_sign_or_marking_desc
+46-30,"Una línea discontinua con trazos muy juntos, ¿qué indica?",https://www.todotest.com/tests/imgs/0516.jpg,q_sign_or_marking_desc|q_marking_hard
+47-7,"Este panel, debajo de una señal vertical...",https://www.todotest.com/tests/imgs/s890c.jpg,q_sign_like|a_sign_or_marking_desc
+47-8,"Los paneles direccionales, ¿qué indican?",https://www.todotest.com/tests/imgs/0521.jpg,q_sign_or_marking_desc
+47-12,"En esta vía de doble sentido, ¿dónde se colocará con su turismo para cambiar de dirección a la izquierda?",https://www.todotest.com/tests/imgs/0522.jpg,q_deictic_road
+47-15,"Un turismo en esta vía, ¿a qué velocidad máxima puede adelantar?",https://www.todotest.com/tests/imgs/0523.jpg,q_deictic_road
+47-18,"En esta vía urbana, donde hay dos carriles para el mismo sentido ¿cuál será la velocidad máxima a la que podemos circular?",https://www.todotest.com/tests/imgs/0745.jpg,q_deictic_road
+47-20,"Un vehículo no prioritario que circule en servicio de urgencia, ¿tiene permitido utilizar las señales acústicas?",https://www.todotest.com/tests/imgs/0084.jpg,q_sign_or_marking_desc
+47-25,"En un paso para peatones, ¿está permitido cambiar el sentido de la marcha?",https://www.todotest.com/tests/imgs/0763.jpg,q_marking_hard
+47-26,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s61b.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+47-27,La señal de la derecha indica...,https://www.todotest.com/tests/imgs/0524.jpg,q_sign_or_marking_desc
+48-5,"A la vista de la señal, ¿puede circular un turismo a más de 70 km/h por el carril de la derecha?",https://www.todotest.com/tests/imgs/s50c.jpg,q_sign_or_marking_desc
+48-8,¿Cuándo termina la limitación de velocidad que impone esta señal?,https://www.todotest.com/tests/imgs/0531.jpg,q_sign_like|q_sign_or_marking_desc
+48-11,"Este turismo, ¿qué espejos retrovisores debe llevar obligatoriamente?",https://www.todotest.com/tests/imgs/0576.jpg,q_deictic_vehicle
+48-13,¿Está permitido realizar un cambio de sentido en esta intersección?,https://www.todotest.com/tests/imgs/1402.jpg,q_deictic_road
+48-20,"Si observa que un vehículo quiere incorporarse por el carril de aceleración, ¿qué debe hacer?",https://www.todotest.com/tests/imgs/0540.jpg,q_shown_appears
+48-21,Esta señal ...,https://www.todotest.com/tests/imgs/r306.jpg,q_sign_like
+48-29,Esta señal indica la proximidad de una intersección...,https://www.todotest.com/tests/imgs/p2.jpg,q_sign_like|q_sign_or_marking_desc
+49-1,"Desde un vehículo policial un agente hace señales al vehículo que circula delante para que se detenga, ¿qué debe hacer su conductor?",https://www.todotest.com/tests/imgs/0422.jpg,q_sign_or_marking_desc
+49-10,"La señal, ¿qué indica?",https://www.todotest.com/tests/imgs/0543.jpg,q_sign_or_marking_desc
+49-12,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s16.jpg,q_sign_like|q_sign_or_marking_desc
+49-16,La señal prohíbe...,https://www.todotest.com/tests/imgs/r304.jpg,q_sign_or_marking_desc
+49-29,"Si existen semáforos con indicaciones distintas a la derecha y a la izquierda, ¿a cuál obedecerán los que pretendan seguir de frente?",https://www.todotest.com/tests/imgs/0216.jpg,q_sign_or_marking_desc
+50-3,"En esta vía, como norma general, ¿está permitido mantenerse en el carril de la izquierda?",https://www.todotest.com/tests/imgs/0039.jpg,q_deictic_road|a_visual_noun_plus_ref
+50-15,Esta señal indica la entrada a una vía reservada para...,https://www.todotest.com/tests/imgs/r407a.jpg,q_sign_like|q_sign_or_marking_desc
+50-18,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s50e.jpg,q_sign_like|q_sign_or_marking_desc
+50-21,La señal triangular indica que se debe...,https://www.todotest.com/tests/imgs/0012.jpg,q_sign_or_marking_desc
+51-1,Estas señales indican peligro por...,https://www.todotest.com/tests/imgs/0290.jpg,q_sign_like|q_sign_or_marking_desc
+51-2,"En esta situación de la fotografía, el conductor del camión, ¿está obligado a apartarse al arcén para facilitar el adelantamiento a otros vehículos?",https://www.todotest.com/tests/imgs/0561.jpg,q_image_like|q_this_situation
+51-6,"En esta intersección y según la señalización, ¿a qué vehículos debe ceder el paso?",https://www.todotest.com/tests/imgs/0562.jpg,q_deictic_road|q_sign_or_marking_desc
+51-10,¿Puede estacionar en esta zona?,https://www.todotest.com/tests/imgs/0292.jpg,q_is_this_pattern
+51-11,¿Alguna de estas señales indica que finaliza un carril destinado a la circulación?,https://www.todotest.com/tests/imgs/0563.jpg,q_sign_like|q_sign_or_marking_desc
+51-14,"En esta situación, si pretende seguir de frente, ¿a cuál de los dos semáforos debe obedecer?",https://www.todotest.com/tests/imgs/0731.jpg,q_this_situation|a_visual_noun_plus_ref
+51-18,Esta señal indica peligro por la proximidad de un tramo...,https://www.todotest.com/tests/imgs/p31.jpg,q_sign_like|q_sign_or_marking_desc
+51-19,"En un túnel, esta señal indica...",https://www.todotest.com/tests/imgs/s990.jpg,q_sign_like|q_sign_or_marking_desc
+51-27,"Conduce el vehículo gris, ¿cómo debe actuar, atendiendo a las marcas viales?",https://www.todotest.com/tests/imgs/0564.jpg,q_sign_or_marking_desc|q_marking_hard
+52-5,¿A qué vehículos prohíbe pasar esta señal?,https://www.todotest.com/tests/imgs/r205.jpg,q_sign_like|q_sign_or_marking_desc
+52-6,"En esta situación, ¿es correcto el adelantamiento que está realizando el turismo?",https://www.todotest.com/tests/imgs/0569.jpg,q_this_situation
+52-11,Esta señal indica que los carriles sobre los que están situadas las señales de velocidad mínima...,https://www.todotest.com/tests/imgs/s50e.jpg,q_sign_like|q_sign_or_marking_desc
+52-18,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s52.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+52-28,"A partir de esta señal, circular como mínimo a 30 kilómetros por hora...",https://www.todotest.com/tests/imgs/r411.jpg,q_sign_like
+53-1,"El lunes a las 9 de la mañana, a partir del lugar donde se encuentra situada esta señal...",https://www.todotest.com/tests/imgs/0301.jpg,q_sign_like
+53-2,"Si queda detenido en el interior de un túnel y se produce un incendio, ¿qué debe hacer?",https://www.todotest.com/tests/imgs/0589.jpg,a_visual_noun_plus_ref
+53-10,"En este cruce, ¿puede pasar cuando se enciende la luz verde?",https://www.todotest.com/tests/imgs/0578.jpg,q_deictic_road
+53-17,Esta señal indica el lugar en el que...,https://www.todotest.com/tests/imgs/r506.jpg,q_sign_like|q_sign_or_marking_desc
+53-26,Los conos de la fotografía ...,https://www.todotest.com/tests/imgs/0587.jpg,q_image_like
+54-1,Si en vía interurbana un ciclomotor de dos ruedas quiere girar a la izquierda y no hay carril acondicionado para ello:,https://www.todotest.com/tests/imgs/0975.jpg,a_visual_noun_plus_ref
+54-6,"Por esta carretera convencional, ¿cuál es la velocidad máxima a la que puede adelantar un vehículo turismo?",https://www.todotest.com/tests/imgs/0592.jpg,q_deictic_road
+54-8,"Las señales horizontales o marcas viales de color blanco, ¿tienen el mismo significado que las señales verticales?",https://www.todotest.com/tests/imgs/0595.jpg,q_sign_or_marking_desc|q_marking_hard
+54-12,"La señal circular con borde rojo, ¿qué indica?",https://www.todotest.com/tests/imgs/0475.jpg,q_sign_or_marking_desc
+54-18,"Este panel, colocado bajo una señal de prohibición, indica...",https://www.todotest.com/tests/imgs/s820.jpg,q_sign_like|q_sign_or_marking_desc
+54-19,La señal que se observa en la fotografía prohíbe...,https://www.todotest.com/tests/imgs/r304.jpg,q_image_like|q_shown_appears|q_sign_or_marking_desc
+54-21,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/s7.jpg,q_sign_like|q_sign_or_marking_desc
+55-3,"El vehículo amarillo disminuye la velocidad porque el adelantamiento que está haciendo el vehículo rojo es peligroso, ¿es correcto?",https://www.todotest.com/tests/imgs/0590.jpg,a_visual_noun_plus_ref
+55-5,El panel bajo la señal indica...,https://www.todotest.com/tests/imgs/0368.jpg,q_sign_or_marking_desc
+55-12,"Por la izquierda de una línea continua, ¿se puede circular?",https://www.todotest.com/tests/imgs/0601.jpg,q_sign_or_marking_desc|q_marking_hard
+55-16,"En esta situación, ¿qué marcas viales debe seguir?",https://www.todotest.com/tests/imgs/0602.jpg,q_this_situation|q_sign_or_marking_desc|q_marking_hard
+55-20,"Si sobre el carril por el que circula hay un semáforo cuadrado con una flecha verde, ¿debe obedecer una señal de stop o de ceda el paso?",https://www.todotest.com/tests/imgs/0604.jpg,q_sign_or_marking_desc
+55-26,El panel indica...,https://www.todotest.com/tests/imgs/0308.jpg,q_sign_or_marking_desc
+55-27,Esta señal ...,https://www.todotest.com/tests/imgs/r400e.jpg,q_sign_like
+55-30,¿Qué indica este agente?,https://www.todotest.com/tests/imgs/poli_2.jpg,a_visual_noun_plus_ref
+56-5,En un cruce no hay señales de preferencia. ¿Debe ceder el paso a un tranvía?,https://www.todotest.com/tests/imgs/0327.jpg,q_sign_or_marking_desc
+56-9,La señal prohíbe...,https://www.todotest.com/tests/imgs/r307.jpg,q_sign_or_marking_desc
+56-10,"Si va a realizar un nuevo adelantamiento, ¿está permitido seguir circulando por el carril izquierdo?",https://www.todotest.com/tests/imgs/0425.jpg,a_visual_noun_plus_ref
+56-18,"En vías urbanas, si no pretende adelantar, ¿qué distancia de seguridad se debe mantener con el turismo que circula delante?",https://www.todotest.com/tests/imgs/1096.jpg,a_visual_noun_plus_ref
+56-22,¿A qué obliga esta señal?,https://www.todotest.com/tests/imgs/r1.jpg,q_sign_like|q_sign_or_marking_desc
+56-25,Esta señal...,https://www.todotest.com/tests/imgs/r403a.jpg,q_sign_like
+57-6,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/0615.jpg,q_sign_or_marking_desc
+57-8,Esta señal indica...,https://www.todotest.com/tests/imgs/p50.jpg,q_sign_like|q_sign_or_marking_desc
+57-21,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/r500.jpg,q_sign_or_marking_desc
+57-22,"En esta vía, ¿cuál es la velocidad máxima permitida para un turismo, si no pretende adelantar?",https://www.todotest.com/tests/imgs/0918.jpg,q_deictic_road
+57-27,¿Qué indica la señal?,https://www.todotest.com/tests/imgs/p16a.jpg,q_sign_or_marking_desc
+58-1,"A la vista de esta señal, ¿qué separación se debe mantener con el vehículo que circula delante?",https://www.todotest.com/tests/imgs/r300.jpg,q_sign_like|q_sign_or_marking_desc
+58-5,"En esta motocicleta, ¿debe llevar casco?",https://www.todotest.com/tests/imgs/0231.jpg,q_deictic_vehicle
+58-9,"En una intersección regulada por esta señal, ¿a quién debe ceder el paso?",https://www.todotest.com/tests/imgs/p2.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+58-10,En esta carretera estrecha quiere realizar un cambio de sentido. ¿Dónde debe colocarse para no molestar a otros vehículos?,https://www.todotest.com/tests/imgs/0629.jpg,q_deictic_road
+58-12,Las marcas viales que señalizan un tramo de obras...,https://www.todotest.com/tests/imgs/0628.jpg,q_marking_hard
+58-17,"En esta curva de visibilidad reducida, ¿está permitido parar o estacionar?",https://www.todotest.com/tests/imgs/0321.jpg,q_deictic_road
+58-21,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s810.jpg,q_sign_like|q_sign_or_marking_desc
+58-26,Esta señal informa de la distancia a un tramo en el que se puede efectuar un cambio de sentido...,https://www.todotest.com/tests/imgs/s22.jpg,q_sign_like|q_sign_or_marking_desc
+58-29,"Las señales y placas de la parte trasera del camión, ¿qué indican?",https://www.todotest.com/tests/imgs/0631.jpg,q_sign_or_marking_desc
+59-5,Esta señal indica...,https://www.todotest.com/tests/imgs/s2a.jpg,q_sign_like|q_sign_or_marking_desc
+59-8,Esta señal indica entrada prohibida a...,https://www.todotest.com/tests/imgs/r103.jpg,q_sign_like|q_sign_or_marking_desc
+59-10,Esta señal advierte del peligro por la proximidad de una zona donde...,https://www.todotest.com/tests/imgs/p29.jpg,q_sign_like|q_sign_or_marking_desc
+59-14,"Estas señales de balizamiento, ¿qué indican?",https://www.todotest.com/tests/imgs/0635.jpg,q_sign_like|q_sign_or_marking_desc
+59-18,¿Cuándo puede estacionar a la vista de esta señal?,https://www.todotest.com/tests/imgs/r308d.jpg,q_sign_like|q_sign_or_marking_desc
+59-23,"El conductor de este vehículo, ¿está obligado a mantener la adecuada colocación de los animales que transporta?",https://www.todotest.com/tests/imgs/0630.jpg,q_deictic_vehicle
+59-26,El panel colocado debajo de la señal vertical...,https://www.todotest.com/tests/imgs/s890c.jpg,a_sign_or_marking_desc
+60-1,En una intersección que no tiene señal de preferencia. ¿Cuándo debe ceder el paso a un vehículo de tracción animal?,https://www.todotest.com/tests/imgs/0640.jpg,q_sign_or_marking_desc
+60-3,¿Qué señala la flecha de la señal?,https://www.todotest.com/tests/imgs/r401a.jpg,q_sign_or_marking_desc
+60-6,¿Qué indican estas señales?,https://www.todotest.com/tests/imgs/0641.jpg,q_sign_like|q_sign_or_marking_desc
+60-17,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r406.jpg,q_sign_like|q_sign_or_marking_desc
+60-21,"En una calzada con los dos sentidos separados por una línea continua, ¿está permitido girar a la izquierda?",https://www.todotest.com/tests/imgs/0645.jpg,q_sign_or_marking_desc|q_marking_hard
+60-24,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r109.jpg,q_sign_like|q_sign_or_marking_desc
+60-25,"En esta curva de visibilidad reducida, ¿está permitido parar?",https://www.todotest.com/tests/imgs/0646.jpg,q_deictic_road
+60-26,"En una zona de obras se encuentra un panel direccional provisional, ¿qué indica?",https://www.todotest.com/tests/imgs/0521.jpg,q_sign_or_marking_desc
+60-29,Esta señal significa intervalo...,https://www.todotest.com/tests/imgs/s9.jpg,q_sign_like|q_sign_or_marking_desc
+62-16,"Si es necesario avisar a un ciclista con señales acústicas, ¿cómo debe hacerse?",https://www.todotest.com/tests/imgs/0084.jpg,q_sign_or_marking_desc
+62-18,¿Qué indica la señal de balizamiento (luz roja fija) que se observa en la fotografia?,https://www.todotest.com/tests/imgs/1973.jpg,q_image_like|q_shown_appears|q_sign_or_marking_desc
+62-19,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/1974.jpg,q_sign_like|q_sign_or_marking_desc
+62-21,¿Qué indica la señal de la imagen?,https://www.todotest.com/tests/imgs/1975.jpg,q_image_like|q_sign_or_marking_desc
+62-22,Esta señal indica que se acerca a un cruce...,https://www.todotest.com/tests/imgs/p1b.jpg,q_sign_like|q_sign_or_marking_desc
+63-3,"En este cruce, ¿qué se debe hacer?",https://www.todotest.com/tests/imgs/0153.jpg,q_deictic_road
+63-11,¿Qué usuarios deben obedecer el semáforo de la fotografía?,https://www.todotest.com/tests/imgs/0048.jpg,q_image_like
+63-14,¿Está permitido circular en ciclomotor por una vía que tiene esta señal en la entrada?,https://www.todotest.com/tests/imgs/r104.jpg,q_sign_like|q_sign_or_marking_desc
+63-16,"Siempre que exista espacio suficiente y adoptando las máximas precauciones, está permitido adelantar por la derecha...",https://www.todotest.com/tests/imgs/0745.jpg,a_marking_hard
+63-20,"Cuando la carga sobresale de un vehículo, ¿es obligatorio señalizarla con el panel de la imagen?",https://www.todotest.com/tests/imgs/v20.jpg,q_image_like|q_sign_or_marking_desc
+63-27,"En una vía con un carril para cada sentido de la marcha, ¿está permitido que un conductor adelante a varios vehículos a la vez?",https://www.todotest.com/tests/imgs/0376.jpg,a_visual_noun_plus_ref
+63-29,"Si un conductor se encuentra esta señal, debe saber que en la próxima intersección...",https://www.todotest.com/tests/imgs/p2.jpg,q_sign_like
+64-1,"La señal de velocidad máxima pintada sobre un carril, ¿qué indica?",https://www.todotest.com/tests/imgs/0222.jpg,a_visual_noun_plus_ref|q_sign_or_marking_desc
+64-3,Esta señal indica la situación de un lugar donde se puede...,https://www.todotest.com/tests/imgs/2007.jpg,q_sign_like|q_sign_or_marking_desc
+64-14,"En esta vía, la separación entre los trazos de la línea discontinua es sensiblemente más corta que en el caso general; ¿qué puede anunciar?",https://www.todotest.com/tests/imgs/0378.jpg,q_deictic_road|q_sign_or_marking_desc|q_marking_hard
+65-5,La señal que se observa en la fotografía indica que tienen prohibido adelantar...,https://www.todotest.com/tests/imgs/r306.jpg,q_image_like|q_shown_appears|q_sign_or_marking_desc
+65-6,"Las señales azules, ¿qué indican?",https://www.todotest.com/tests/imgs/0255.jpg,q_sign_or_marking_desc
+65-12,"A falta de señalización, ¿cuál es la velocidad máxima permitida para una furgoneta cuando circule por una autovía que discurra dentro de poblado?",https://www.todotest.com/tests/imgs/0285.jpg,q_sign_or_marking_desc
+65-20,"En esta carretera convencional con arcén transitable, ¿por dónde debe circular un ciclomotor?",https://www.todotest.com/tests/imgs/0189.jpg,q_deictic_road
+65-22,"Un conductor se encuentra situado en el carril derecho de esta calzada, ¿puede seguir de frente?",https://www.todotest.com/tests/imgs/2008.jpg,q_deictic_road
+65-27,"En este paso de peatones si el semáforo no funciona, ¿es obligatorio detenerse y ceder el paso a los peatones que intentan cruzarlo?",https://www.todotest.com/tests/imgs/2011.jpg,q_deictic_road
+65-30,"Esta señal, ¿prohíbe la entrada a camiones?",https://www.todotest.com/tests/imgs/r112.jpg,q_sign_like|q_sign_or_marking_desc
+66-20,"A la vista de la señal, ¿podremos realizar un cambio de sentido de la marcha?",https://www.todotest.com/tests/imgs/r403b.jpg,q_sign_or_marking_desc
+66-29,¿Esta señal prohíbe efectuar un cambio de dirección a la izquierda?,https://www.todotest.com/tests/imgs/r304.jpg,q_sign_like|q_sign_or_marking_desc
+67-5,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/p11.jpg,q_sign_like|q_sign_or_marking_desc
+67-7,"Dadas las circunstancias, ¿podremos adelantar al vehículo que nos precede?",https://www.todotest.com/tests/imgs/0367.jpg,a_sign_or_marking_desc|a_marking_hard
+67-15,"Este panel en un vehículo, ¿qué nos indica?",https://www.todotest.com/tests/imgs/v20.jpg,q_sign_like|q_sign_or_marking_desc
+67-17,"Como norma general y a la vista de la señal, ¿circula correctamente un vehículo por el carril de la izquierda si su velocidad es de 70 km/h?",https://www.todotest.com/tests/imgs/s53a.jpg,a_visual_noun_plus_ref|q_sign_or_marking_desc
+68-3,Esta señal indica...,https://www.todotest.com/tests/imgs/s51.jpg,q_sign_like|q_sign_or_marking_desc
+68-17,¿Cuál será la velocidad mínima en esta vía para un turismo?,https://www.todotest.com/tests/imgs/0685.jpg,q_deictic_road
+68-22,Para circular de forma segura la profundidad mínima de las ranuras del dibujo de los neumáticos será de...,https://www.todotest.com/tests/imgs/0313.jpg,q_image_like
+68-23,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r303.jpg,q_sign_like|q_sign_or_marking_desc
+68-26,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r500.jpg,q_sign_like|q_sign_or_marking_desc
+69-21,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/r6.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
+70-4,"El panel obligatorio para indicar la carga que sobresale por la parte posterior, ¿podrá sustituirse en algún caso?",https://www.todotest.com/tests/imgs/0215.jpg,q_sign_or_marking_desc
+70-5,"Las cargas que sobresalen por detrás del vehículo, ¿se señalizarán con este panel?",https://www.todotest.com/tests/imgs/v20.jpg,q_sign_like|q_sign_or_marking_desc
+71-3,¿A qué velocidad como máximo podremos circular en el preciso instante en el que observamos esta señal?,https://www.todotest.com/tests/imgs/s510.jpg,q_sign_like|q_sign_or_marking_desc
+71-9,Estas señales de advertencia de peligro le indican...,https://www.todotest.com/tests/imgs/0664.jpg,q_sign_like|q_sign_or_marking_desc
+71-13,La señal indica el paso de dos a tres carriles de circulación y además...,https://www.todotest.com/tests/imgs/s53c.jpg,q_sign_or_marking_desc
+71-17,Esta señal indica que ha finalizado...,https://www.todotest.com/tests/imgs/r500.jpg,q_sign_like|q_sign_or_marking_desc
+71-23,¿Podrá usted efectuar un cambio de dirección hacia la izquierda en esta curva de visibilidad reducida?,https://www.todotest.com/tests/imgs/0700.jpg,q_deictic_road
+71-25,"A la vista de la señal, ¿qué vehículos tendrán prioridad de paso?",https://www.todotest.com/tests/imgs/r6.jpg,q_sign_or_marking_desc
+71-28,¿Cuál será la velocidad mínima en esta vía para un turismo con remolque?,https://www.todotest.com/tests/imgs/0341.jpg,q_deictic_road
+71-30,¿Qué debemos hacer a la vista de la señal?,https://www.todotest.com/tests/imgs/s24.jpg,q_sign_or_marking_desc
+72-5,¿Una persona en silla de ruedas con motor podrá circular por el arcén de esta vía?,https://www.todotest.com/tests/imgs/0692.jpg,q_deictic_road
+72-6,"Si el conductor del vehículo que nos precede señaliza mediante el indicador de dirección que pretende girar a la izquierda pero con el brazo indica que quiere girar a la derecha, ¿a qué señalización atenderemos?",https://www.todotest.com/tests/imgs/0719.jpg,q_sign_or_marking_desc
+72-8,¿Qué vehículo tendrá prioridad en esta glorieta?,https://www.todotest.com/tests/imgs/0538.jpg,q_deictic_road
+72-15,"La autocaravana de la imagen tiene una MMA de 3700 kg, ¿cuál será su velocidad máxima en esta vía?",https://www.todotest.com/tests/imgs/0703.jpg,q_image_like|q_deictic_road
+72-18,¿Circula correctamente este vehículo por el carril de la izquierda si pretende cambiar de dirección hacia ese lado en una intersección todavía lejana?,https://www.todotest.com/tests/imgs/0744.jpg,q_deictic_vehicle
+72-27,¿Qué vehículo tendrá prioridad en esta intersección?,https://www.todotest.com/tests/imgs/0677.jpg,q_deictic_road|a_visual_noun_plus_ref
+73-5,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/r5.jpg,q_sign_like|q_sign_or_marking_desc
+73-7,¿Qué nos indica esta señal?,https://www.todotest.com/tests/imgs/s11.jpg,q_sign_like|q_sign_or_marking_desc
+74-1,"Además de llevar la placa L, ¿qué otras condiciones deben cumplir los conductores noveles?",https://www.todotest.com/tests/imgs/0141.jpg,a_visual_noun_plus_ref
+74-30,"En esta intersección, ¿qué vehículo pasará en último lugar si el vehículo rojo gira hacia la izquierda?",https://www.todotest.com/tests/imgs/0007.jpg,q_deictic_road
+75-25,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/0345.jpg,q_sign_like|q_sign_or_marking_desc
+76-16,¿Podemos en algún caso circular por el lado izquierdo de una línea continua?,https://www.todotest.com/tests/imgs/0645.jpg,q_sign_or_marking_desc|q_marking_hard
+76-17,¿Qué distancia mantendremos con este vehículo que nos precede?,https://www.todotest.com/tests/imgs/0367.jpg,q_deictic_vehicle
+76-28,¿Qué velocidad se considera que es anormalmente reducida circulando por esta vía?,https://www.todotest.com/tests/imgs/0162.jpg,q_deictic_road
+77-21,¿Qué significa está señal?,https://www.todotest.com/tests/imgs/s61a.jpg,a_visual_noun_plus_ref|q_sign_or_marking_desc
+77-30,¿Se puede circular pisando las líneas discontinuas del centro de la calzada en algún caso?,https://www.todotest.com/tests/imgs/0696.jpg,q_sign_or_marking_desc|q_marking_hard
+78-9,"El vehículo de la imagen está circulando con la luz antiniebla posterior, ¿es correcto?",https://www.todotest.com/tests/imgs/0699.jpg,q_image_like
+78-15,¿Qué indican estas señales?,https://www.todotest.com/tests/imgs/0664.jpg,q_sign_like|q_sign_or_marking_desc
+78-22,¿Tiene correctamente situadas las manos en el volante este conductor?,https://www.todotest.com/tests/imgs/0436.jpg,q_deictic_vehicle|q_is_this_pattern
+79-1,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/r309.jpg,q_sign_like|q_sign_or_marking_desc
+79-2,"Si entramos en un estrechamiento teniendo esta señal en nuestro sentido y no pudiéramos atravesarlo juntamente con los vehículos que se acercan en sentido contrario, ¿qué vehículo deberá retroceder?",https://www.todotest.com/tests/imgs/r5.jpg,q_sign_like|q_sign_or_marking_desc
+79-8,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/p28.jpg,q_sign_like|q_sign_or_marking_desc
+79-25,"Al llegar a la intersección de la imagen, ¿podremos cambiar de dirección hacia la izquierda?",https://www.todotest.com/tests/imgs/0688.jpg,q_image_like
+79-28,"Esta señal, ¿qué indica?",https://www.todotest.com/tests/imgs/s19.jpg,q_sign_like|q_sign_or_marking_desc
+79-29,"Si circulamos a 70 km/h por el carril central y no hay más tráfico en la calzada, ¿lo hacemos correctamente?",https://www.todotest.com/tests/imgs/s53c.jpg,a_visual_noun_plus_ref
+80-12,"A la vista de esta señal, ¿podrá usted efectuar un cambio de sentido?",https://www.todotest.com/tests/imgs/r403b.jpg,q_sign_like|q_sign_or_marking_desc
+81-2,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/p32.jpg,q_sign_like|q_sign_or_marking_desc
+81-5,¿Cuál será la velocidad máxima en esta vía?,https://www.todotest.com/tests/imgs/0695.jpg,q_deictic_road
+83-16,"La prohibición de estacionar, ¿terminará cuando finalice el peligro indicado por la señal superior?",https://www.todotest.com/tests/imgs/0670.jpg,q_sign_or_marking_desc
+85-24,"Dentro de poblado, en una vía de tres carriles para el mismo sentido y delimitados por marcas viales, ¿circular por el carril de la izquierda es correcto?",https://www.todotest.com/tests/imgs/0907.jpg,q_sign_or_marking_desc|q_marking_hard
+85-27,"El vehículo rojo, ¿dónde se detendrá para realizar el STOP?",https://www.todotest.com/tests/imgs/0693.jpg,a_marking_hard
+85-30,"Si el vehículo de la imagen circula a 80 km/h, ¿lo hará correctamente a partir de la señal?",https://www.todotest.com/tests/imgs/0660.jpg,q_image_like|q_sign_or_marking_desc
+86-14,"En esta calzada con un carril adicional, ¿qué vehículos circulan correctamente?",https://www.todotest.com/tests/imgs/0658.jpg,q_deictic_road
+86-15,A partir de esta señal...,https://www.todotest.com/tests/imgs/s28-2.jpg,q_sign_like
+86-28,¿A qué vehículos prohíbe la circulación esta señal?,https://www.todotest.com/tests/imgs/r100.jpg,q_sign_like|q_sign_or_marking_desc
+87-7,¿A qué velocidad podrá circular un conductor novel por esta carretera convencional?,https://www.todotest.com/tests/imgs/0178.jpg,q_deictic_road
+87-17,¿A qué vehículos prohíbe la entrada esta señal?,https://www.todotest.com/tests/imgs/r106.jpg,q_sign_like|q_sign_or_marking_desc
+88-2,¿Se podrá efectuar un cambio de sentido antes de la curva?,https://www.todotest.com/tests/imgs/0001.jpg,a_sign_or_marking_desc
+88-10,¿Qué le indica esta señal?,https://www.todotest.com/tests/imgs/p33.jpg,q_sign_like|q_sign_or_marking_desc
+88-18,"A la vista de la señal y teniendo en cuenta que circulamos a 90 km/h, ¿podremos utilizar el carril derecho?",https://www.todotest.com/tests/imgs/s50c.jpg,q_sign_or_marking_desc
+89-12,"Este panel, ¿qué indica?",https://www.todotest.com/tests/imgs/0050.jpg,q_sign_like|q_sign_or_marking_desc
+89-18,¿Qué significa esta señal?,https://www.todotest.com/tests/imgs/p28.jpg,q_sign_like|q_sign_or_marking_desc
+89-22,¿Cuál será la velocidad máxima a la que se podrá circular por esta vía?,https://www.todotest.com/tests/imgs/0321.jpg,q_deictic_road
+89-27,"A la vista de la imagen, ¿A qué velocidad como máximo podremos circular en esta vía de sentido único con un solo carril?",https://www.todotest.com/tests/imgs/1152.jpg,q_image_like|q_deictic_road
+90-15,"En la próxima intersección nos encontramos con la señal de la imagen y con un coche que se nos aproxima por la derecha, ¿quién tendrá prioridad de paso?",https://www.todotest.com/tests/imgs/r3.jpg,q_image_like|q_sign_or_marking_desc
+90-23,¿Qué indica esta señal?,https://www.todotest.com/tests/imgs/s26a.jpg,q_sign_like|a_visual_noun_plus_ref|q_sign_or_marking_desc
